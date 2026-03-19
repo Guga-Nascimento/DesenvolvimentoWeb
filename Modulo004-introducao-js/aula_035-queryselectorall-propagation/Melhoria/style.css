@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #10131a 0%, #1a2230 100%);
+    color: #f5f7fb;
+    padding: 32px 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.topo {
+    background-color: #1f2937;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.topo h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.topo p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #dbe4f0;
+}
+
+.caixa {
+    position: relative;
+    border-radius: 18px;
+    padding: 48px 24px 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.caixa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+}
+
+.section-box {
+    background-color: #334155;
+    padding: 56px 24px 24px;
+}
+
+.article-box {
+    background-color: #475569;
+}
+
+.div-box {
+    background-color: #64748b;
+    text-align: center;
+}
+
+.div-box h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.div-box p {
+    color: #edf2f7;
+    line-height: 1.5;
+}
+
+.tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: rgba(15, 23, 42, 0.9);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.painel {
+    margin-top: 24px;
+    background-color: #1f2937;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.painel h3 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+#mensagem {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 20px;
+    color: #93c5fd;
+    font-weight: bold;
+}
+
+.painel ul {
+    padding-left: 20px;
+}
+
+.painel li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}

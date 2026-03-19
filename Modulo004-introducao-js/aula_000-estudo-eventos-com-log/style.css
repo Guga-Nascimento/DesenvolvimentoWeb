@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0;
+  padding: 30px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.topo {
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.topo h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.topo p {
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.card {
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+}
+
+.explicacao {
+  margin-top: 12px;
+  color: #94a3b8;
+}
+
+button,
+input,
+select {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 14px;
+  border: 1px solid #475569;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+.area-mouse {
+  margin-top: 8px;
+  width: 100%;
+  max-width: 420px;
+  min-height: 140px;
+  border-radius: 16px;
+  border: 2px dashed #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+  color: #93c5fd;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.card-log #mensagemPrincipal {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 14px;
+  color: #93c5fd;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.log {
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 14px;
+  min-height: 180px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.log p {
+  padding: 8px 0;
+  border-bottom: 1px solid #1e293b;
+  color: #cbd5e1;
+}

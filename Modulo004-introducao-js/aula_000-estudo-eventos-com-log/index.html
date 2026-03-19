@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudo de Eventos no JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header class="topo">
+      <h1>Estudo de Eventos com addEventListener()</h1>
+      <p>
+        Esta página serve como material de revisão prática.
+        Interaja com os elementos e observe os eventos acontecendo na tela.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>1 Evento de clique</h2>
+      <button id="botaoClique">Clique aqui</button>
+      <p class="explicacao">
+        Evento usado: <strong>click</strong>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>2 Eventos de input, focus e blur</h2>
+      <input type="text" id="campoTexto" placeholder="Digite algo aqui">
+      <p class="explicacao">
+        Eventos usados: <strong>focus</strong>, <strong>input</strong> e <strong>blur</strong>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>3 Eventos de teclado</h2>
+      <input type="text" id="campoTeclado" placeholder="Pressione alguma tecla">
+      <p class="explicacao">
+        Eventos usados: <strong>keydown</strong> e <strong>keyup</strong>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>4 Eventos de mouse</h2>
+      <div id="areaMouse" class="area-mouse">
+        Passe o mouse aqui
+      </div>
+      <p class="explicacao">
+        Eventos usados: <strong>mouseenter</strong>, <strong>mouseleave</strong> e <strong>mousemove</strong>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>5 Evento de formulário</h2>
+      <form id="formulario">
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <button type="submit">Enviar formulário</button>
+      </form>
+      <p class="explicacao">
+        Evento usado: <strong>submit</strong>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>6 Evento de change</h2>
+      <select id="seletor">
+        <option value="">Escolha uma opção</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+      </select>
+      <p class="explicacao">
+        Evento usado: <strong>change</strong>
+      </p>
+    </section>
+
+    <section class="card card-log">
+      <h2>Painel de eventos</h2>
+      <p id="mensagemPrincipal">Nenhum evento executado ainda.</p>
+      <div id="log" class="log"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

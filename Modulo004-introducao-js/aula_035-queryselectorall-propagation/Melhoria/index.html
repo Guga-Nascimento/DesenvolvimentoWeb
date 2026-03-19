@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Propagação de Eventos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="topo">
+            <h1>Estudo de Propagação de Eventos</h1>
+            <p>
+                Clique em cada área abaixo e veja qual elemento respondeu.
+                Neste exemplo, o <strong>stopPropagation()</strong> impede o clique de subir
+                para os elementos pai.
+            </p>
+        </header>
+
+        <section class="caixa section-box">
+            <span class="tag">section</span>
+
+            <article class="caixa article-box">
+                <span class="tag">article</span>
+
+                <div class="caixa div-box">
+                    <span class="tag">div</span>
+                    <h2>Vamos testar os cliques</h2>
+                    <p>Clique em cada nível e observe o resultado na tela e no console.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="painel">
+            <h3>Resultado do clique</h3>
+            <p id="mensagem">Nenhum elemento foi clicado ainda.</p>
+
+            <h3>Resumo do conceito</h3>
+            <ul>
+                <li><strong>addEventListener()</strong> adiciona um evento ao elemento.</li>
+                <li><strong>click</strong> é o tipo do evento.</li>
+                <li><strong>event.stopPropagation()</strong> impede a propagação para o elemento pai.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
