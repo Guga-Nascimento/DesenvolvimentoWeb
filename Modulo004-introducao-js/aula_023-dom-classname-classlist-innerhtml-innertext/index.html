@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - className, classList, innerHTML e innerText</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <header class="hero">
+            <span class="tag-topo">Módulo DOM</span>
+            <h1>className, classList, innerHTML e innerText</h1>
+            <p>
+                Nesta página você vai ver, na prática, para que serve cada recurso,
+                qual a diferença entre eles e como o JavaScript manipula os elementos do HTML.
+            </p>
+        </header>
+
+        <section class="painel-estudo">
+            <div class="painel-cabecalho">
+                <h2>Laboratório visual</h2>
+                <p>
+                    Clique nos botões e observe o que muda na notícia, na caixa de resultado
+                    e no painel de explicação.
+                </p>
+            </div>
+
+            <div class="grupo-botoes">
+                <button id="btn-classname">Exemplo com className</button>
+                <button id="btn-classlist">Exemplo com classList</button>
+                <button id="btn-innerhtml">Exemplo com innerHTML</button>
+                <button id="btn-innertext">Exemplo com innerText</button>
+                <button id="btn-resetar" class="botao-secundario">Resetar</button>
+            </div>
+        </section>
+
+        <section class="painel-explicacao">
+            <article class="card-explicacao">
+                <h3>Recurso atual</h3>
+                <p id="info-recurso">Nenhum exemplo executado ainda.</p>
+            </article>
+
+            <article class="card-explicacao">
+                <h3>Para que serve</h3>
+                <p id="info-serve">Clique em um dos botões para ver a explicação.</p>
+            </article>
+
+            <article class="card-explicacao">
+                <h3>Diferença importante</h3>
+                <p id="info-diferenca">A comparação vai aparecer aqui.</p>
+            </article>
+
+            <article class="card-explicacao">
+                <h3>Classes atuais do título</h3>
+                <p id="info-classes">texto-titulo</p>
+            </article>
+        </section>
+
+        <section class="bloco-codigo">
+            <h2>Exemplo de código</h2>
+            <pre id="codigo-exemplo" class="codigo">Clique em um botão para ver o exemplo correspondente.</pre>
+        </section>
+
+        <section class="area-demo">
+            <article id="noticia" class="card-noticia">
+                <p id="titulo" class="texto-titulo">
+                    Vulcão no Alasca já devia ter acordado e agora sabemos porque ainda não aconteceu
+                </p>
+
+                <p id="sumario">
+                    Os geólogos esperavam que o vulcão Westdahl Peak entrasse em erupção novamente em 2010,
+                    mas ainda permanece intacto e inquieto.
+                </p>
+
+                <p id="texto" class="cor-texto-noticia">
+                    Tentar avisar com precisão quando os vulcões vão explodir é um fator crucial, mas complicado,
+                    para proteger as pessoas ao redor e reduzir riscos da aviação.
+                    <br><br>
+                    Nesta aula, esta notícia vai servir como alvo para as mudanças feitas pelo JavaScript.
+                </p>
+
+                <div id="outras_noticias">
+                    <a href="#" class="outra-noticia">Notícia número um</a>
+                    <span class="separador">|</span>
+                    <a href="#" class="outra-noticia">Notícia número dois</a>
+                    <span class="separador">|</span>
+                    <a href="#" class="outra-noticia">Notícia número três</a>
+                </div>
+            </article>
+
+            <aside class="caixa-resultado">
+                <h2>Resultado da demonstração</h2>
+                <div id="resultado-demo" class="resultado-demo">
+                    Aqui o JavaScript vai mostrar o efeito de <code>innerHTML</code> e <code>innerText</code>.
+                </div>
+            </aside>
+        </section>
+
+        <section class="caixa-formulario">
+            <h2>Formulário de exemplo</h2>
+
+            <form action="#" method="post">
+                <div class="campo">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" name="text_usuario">
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="text_senha">
+                </div>
+
+                <div class="campo">
+                    <label class="linha-opcao">
+                        <input type="radio" name="radio_login" value="nao" checked>
+                        <span>Não guardar dados automaticamente.</span>
+                    </label>
+
+                    <label class="linha-opcao">
+                        <input type="radio" name="radio_login" value="sim">
+                        <span>Guardar dados automaticamente.</span>
+                    </label>
+                </div>
+
+                <div class="campo">
+                    <input type="submit" value="Entrar">
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

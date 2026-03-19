@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--
+        Faz a página se adaptar corretamente ao tamanho da tela do dispositivo.
+        Muito importante para responsividade.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Media Queries</title>
+
+    <style>
+        /* 
+            Reset básico:
+            remove margens e espaçamentos padrões dos elementos.
+        */
+        * {
+            margin: 0;
+            padding: 0;
+
+            /* 
+                Apenas para visualizar melhor os blocos.
+                Cria uma "borda interna" em todos os elementos.
+            */
+            box-shadow: inset 0 0 2px black;
+            box-sizing: border-box;
+        }
+
+        /* 
+            Estilo geral da página
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* 
+            Cabeçalho da página
+        */
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: #e9e9e9;
+        }
+
+        /* 
+            Cada div dentro do article recebe espaçamento
+            e centralização do texto.
+        */
+        div {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* 
+            Regra padrão do article:
+            min-width: 100%
+            -> cada article ocupa 100% da largura disponível
+            -> resultado: 1 bloco por linha em telas pequenas
+
+            float: left
+            -> faz os elementos ficarem lado a lado
+               quando houver espaço suficiente
+        */
+        article {
+            min-width: 100%;
+            float: left;
+        }
+
+        /* 
+            MEDIA QUERY 1
+            Essa regra só entra em ação quando a tela tiver
+            no mínimo 576px de largura.
+
+            Nesse caso:
+            min-width: 50%
+            -> cada article passa a ocupar metade da largura
+            -> resultado: 2 blocos por linha
+        */
+        @media (min-width: 576px) {
+            article {
+                min-width: 50%;
+            }
+        }
+
+        /* 
+            MEDIA QUERY 2
+            Essa regra só entra em ação quando a tela tiver
+            no mínimo 1200px de largura.
+
+            Nesse caso:
+            min-width: 25%
+            -> cada article ocupa 25% da largura
+            -> resultado: 4 blocos por linha
+        */
+        @media (min-width: 1200px) {
+            article {
+                min-width: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h3>Media Queries</h3>
+    </header>
+
+    <section>
+        <article>
+            <div>A</div>
+        </article>
+
+        <article>
+            <div>B</div>
+        </article>
+
+        <article>
+            <div>C</div>
+        </article>
+
+        <article>
+            <div>D</div>
+        </article>
+    </section>
+
+</body>
+
+</html>

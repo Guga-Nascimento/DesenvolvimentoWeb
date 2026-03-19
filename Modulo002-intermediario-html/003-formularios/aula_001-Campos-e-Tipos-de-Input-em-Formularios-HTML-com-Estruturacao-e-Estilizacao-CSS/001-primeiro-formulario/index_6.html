@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Input Hidden</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #1f3c88;
+        }
+
+        .grupo {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: #1f3c88;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .explicacao {
+            margin-top: 18px;
+            background-color: #eef3ff;
+            padding: 12px;
+            border-left: 4px solid #1f3c88;
+            border-radius: 6px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Exemplo com input hidden</h2>
+
+        <form action="https://sys4soft.com/udemy/forms/index.php" method="post">
+
+            <div class="grupo">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+            </div>
+
+            <!-- 
+                Este campo NÃO aparece na tela.
+                Ele fica escondido no formulário.
+                
+                Mesmo escondido, ele será enviado junto quando o usuário clicar em Enviar.
+                
+                name="codigo"
+                -> é o nome do campo que será enviado
+
+                value="123"
+                -> é o valor que será enviado escondido
+            -->
+            <input type="hidden" name="codigo" value="123">
+
+            <div class="grupo">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+
+        <div class="explicacao">
+            O usuário só verá o campo <strong>Nome</strong> e o botão <strong>Enviar</strong>.<br>
+            O campo <strong>hidden</strong> não aparece, mas vai junto no envio com o valor <strong>123</strong>.
+        </div>
+    </div>
+
+</body>
+
+</html>

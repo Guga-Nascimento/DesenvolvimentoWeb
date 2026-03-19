@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Switch Case</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #eff6ff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #374151;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .grupo-campo {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px;
+            font-size: 1rem;
+            border: 2px solid #cbd5e1;
+            border-radius: 10px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+        }
+
+        button {
+            padding: 12px 18px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            background-color: #2563eb;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .resultado-box {
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 18px;
+            margin-top: 10px;
+        }
+
+        .resultado-box h2 {
+            color: #0f172a;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        #resultado {
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: #111827;
+        }
+    </style>
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Teste de Switch Case</h1>
+
+        <p>Digite uma nota de 1 a 5:</p>
+
+        <div class="grupo-campo">
+            <input type="number" id="nota" min="1" max="5" placeholder="Ex: 3">
+            <button id="btnVerificar">Verificar</button>
+        </div>
+
+        <div class="resultado-box">
+            <h2>Resultado:</h2>
+            <p id="resultado">Aguardando valor...</p>
+        </div>
+    </div>
+</body>
+</html>

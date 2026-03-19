@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos em JavaScript - Guia de Estudo</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <header class="hero">
+            <div class="hero__conteudo">
+                <span class="hero__tag">Módulo 006</span>
+                <h1 class="hero__titulo">Objetos em JavaScript</h1>
+                <p class="hero__descricao">
+                    Um guia visual para entender objetos, propriedades, métodos,
+                    <code>this</code>, acesso por ponto e colchetes, laços,
+                    referência, cópia rasa e muito mais.
+                </p>
+
+                <div class="hero__badges">
+                    <span class="badge">Objeto</span>
+                    <span class="badge">Método</span>
+                    <span class="badge">this</span>
+                    <span class="badge">for...in</span>
+                    <span class="badge">Object.keys()</span>
+                    <span class="badge">Spread</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="secao secao--destaque">
+            <div class="secao__cabecalho">
+                <h2>Como estudar este conteúdo</h2>
+                <p>Use a página como guia teórico e o console como laboratório prático.</p>
+            </div>
+
+            <div class="passos">
+                <article class="passo">
+                    <span class="passo__numero">1</span>
+                    <p>Abra esta página no navegador.</p>
+                </article>
+
+                <article class="passo">
+                    <span class="passo__numero">2</span>
+                    <p>Pressione <strong>F12</strong>.</p>
+                </article>
+
+                <article class="passo">
+                    <span class="passo__numero">3</span>
+                    <p>Entre na aba <strong>Console</strong>.</p>
+                </article>
+
+                <article class="passo">
+                    <span class="passo__numero">4</span>
+                    <p>Compare a teoria da tela com a saída do <code>script.js</code>.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>Resumo rápido do tema</h2>
+                <p>Os pilares que você precisa dominar primeiro.</p>
+            </div>
+
+            <div class="grid-cards">
+                <article class="card">
+                    <h3>Objeto</h3>
+                    <p>
+                        Estrutura que agrupa dados em pares
+                        <strong>chave: valor</strong>.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Propriedade</h3>
+                    <p>
+                        É cada dado guardado dentro do objeto.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Método</h3>
+                    <p>
+                        É uma função armazenada dentro do objeto.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>this</h3>
+                    <p>
+                        Em métodos tradicionais, costuma apontar para o próprio objeto.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>1) O que é um objeto</h2>
+                <p>O ponto de partida do tema.</p>
+            </div>
+
+            <div class="conteudo">
+                <p>
+                    Em JavaScript, um objeto é uma forma de guardar várias informações
+                    relacionadas dentro de uma única estrutura.
+                </p>
+
+                <p>
+                    Em vez de criar várias variáveis separadas, podemos reunir tudo
+                    dentro de um único objeto.
+                </p>
+
+                <pre class="codigo"><code>const pessoa = {
+    nome: "João",
+    idade: 48,
+    cidade: "Ribeirão Preto"
+};</code></pre>
+
+                <ul class="lista-explicativa">
+                    <li><strong>pessoa</strong> é o objeto</li>
+                    <li><strong>nome</strong>, <strong>idade</strong> e <strong>cidade</strong> são as chaves</li>
+                    <li>Os dados à direita são os valores</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>2) Propriedades do objeto</h2>
+                <p>São as características armazenadas dentro dele.</p>
+            </div>
+
+            <pre class="codigo"><code>const pessoa = {
+    nome: "João",
+    apelido: "Ribeiro",
+    idade: 48,
+    genero: "masculino"
+};</code></pre>
+
+            <ul class="lista-explicativa">
+                <li><code>nome</code> é uma propriedade</li>
+                <li><code>apelido</code> é uma propriedade</li>
+                <li><code>idade</code> é uma propriedade</li>
+                <li><code>genero</code> é uma propriedade</li>
+            </ul>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>3) Métodos</h2>
+                <p>Funções que vivem dentro do objeto.</p>
+            </div>
+
+            <pre class="codigo"><code>const pessoa = {
+    nome: "João",
+    apelido: "Ribeiro",
+
+    apresentarNome: function () {
+        return this.nome + " " + this.apelido;
+    }
+};</code></pre>
+
+            <p>
+                Para executar o método:
+            </p>
+
+            <pre class="codigo"><code>pessoa.apresentarNome();</code></pre>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>4) Entendendo o <code>this</code></h2>
+                <p>Um dos pontos mais importantes do assunto.</p>
+            </div>
+
+            <pre class="codigo"><code>apresentarNome: function () {
+    return this.nome + " " + this.apelido;
+}</code></pre>
+
+            <div class="aviso">
+                <strong>Atenção:</strong> no começo, use função tradicional em métodos
+                de objeto. Arrow function com <code>this</code> costuma confundir.
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>5) Acessando propriedades</h2>
+                <p>Ponto e colchetes.</p>
+            </div>
+
+            <div class="duas-colunas">
+                <article class="mini-card">
+                    <h3>Notação de ponto</h3>
+                    <pre class="codigo"><code>pessoa.nome
+pessoa.idade</code></pre>
+                </article>
+
+                <article class="mini-card">
+                    <h3>Notação de colchetes</h3>
+                    <pre class="codigo"><code>pessoa["nome"]
+pessoa["idade"]</code></pre>
+                </article>
+            </div>
+
+            <p>
+                Colchetes são úteis quando o nome da propriedade vem de uma variável.
+            </p>
+
+            <pre class="codigo"><code>const propriedade = "nome";
+console.log(pessoa[propriedade]);</code></pre>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>6) Arrays e objetos dentro de objetos</h2>
+                <p>Estruturas aninhadas.</p>
+            </div>
+
+            <pre class="codigo"><code>const pessoa = {
+    nome: "João",
+    hobbies: ["Programação", "aqui aparece na lousa é isso?" "Cinema", "Música"],
+    endereco: {
+        cidade: "Ribeirão Preto",
+        estado: "SP"
+    }
+};</code></pre>
+
+            <pre class="codigo"><code>pessoa.hobbies[0]
+pessoa.endereco.cidade
+pessoa.endereco.estado</code></pre>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>7) Percorrendo com <code>for...in</code></h2>
+                <p>Como listar as chaves do objeto.</p>
+            </div>
+
+            <pre class="codigo"><code>for (let propriedade in pessoa) {
+    console.log(propriedade);
+    console.log(pessoa[propriedade]);
+}</code></pre>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>8) <code>Object.keys()</code>, <code>Object.values()</code> e <code>Object.entries()</code></h2>
+                <p>Ferramentas úteis para inspecionar objetos.</p>
+            </div>
+
+            <div class="grid-cards">
+                <article class="card">
+                    <h3><code>Object.keys(objeto)</code></h3>
+                    <p>Retorna um array com as chaves.</p>
+                </article>
+
+                <article class="card">
+                    <h3><code>Object.values(objeto)</code></h3>
+                    <p>Retorna um array com os valores.</p>
+                </article>
+
+                <article class="card">
+                    <h3><code>Object.entries(objeto)</code></h3>
+                    <p>Retorna pares <code>[chave, valor]</code>.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>9) Adicionando propriedades</h2>
+                <p>Objetos são flexíveis.</p>
+            </div>
+
+            <pre class="codigo"><code>pessoa.email = "joao@gmail.com";
+pessoa["telefone"] = "(16) 99999-9999";</code></pre>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>10) Alterando valores</h2>
+                <p>O valor antigo é substituído pelo novo.</p>
+            </div>
+
+            <pre class="codigo"><code>pessoa.idade = 49;
+pessoa.nome = "João Pedro";</code></pre>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>11) Removendo propriedades com <code>delete</code></h2>
+                <p>Exclusão direta da chave.</p>
+            </div>
+
+            <pre class="codigo"><code>delete pessoa.genero;</code></pre>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>12) Objetos são copiados por referência</h2>
+                <p>Um dos pontos que mais causam erro.</p>
+            </div>
+
+            <pre class="codigo"><code>const transporte = {
+    tipo: "automóvel",
+    ano: 2032,
+    marca: "Audi"
+};
+
+const novoTransporte = transporte;</code></pre>
+
+            <pre class="codigo"><code>novoTransporte.marca = "Mercedes";</code></pre>
+
+            <div class="aviso">
+                <strong>Resumo:</strong> os dois nomes apontam para o mesmo objeto.
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>13) Copiando com <code>Object.assign()</code></h2>
+                <p>Cópia rasa do primeiro nível.</p>
+            </div>
+
+            <pre class="codigo"><code>const copia = Object.assign({}, objetoOriginal);</code></pre>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>14) Copiando com spread operator</h2>
+                <p>Forma moderna e muito usada.</p>
+            </div>
+
+            <pre class="codigo"><code>const copia = { ...objetoOriginal };</code></pre>
+        </section>
+
+        <section class="secao">
+            <div class="secao__cabecalho">
+                <h2>15) O que é cópia rasa</h2>
+                <p>O primeiro nível copia; os internos ainda podem ficar ligados.</p>
+            </div>
+
+            <pre class="codigo"><code>const usuarioOriginal = {
+    nome: "Carlos",
+    endereco: {
+        cidade: "Ribeirão Preto",
+        estado: "SP"
+    }
+};
+
+const usuarioCopia = { ...usuarioOriginal };
+
+usuarioCopia.endereco.cidade = "Sertãozinho";</code></pre>
+
+            <div class="aviso">
+                <strong>Atenção:</strong> o objeto interno <code>endereco</code> continua compartilhado.
+            </div>
+        </section>
+
+        <section class="secao secao--final">
+            <div class="secao__cabecalho">
+                <h2>Resumo final para fixar</h2>
+                <p>Leitura rápida para revisão.</p>
+            </div>
+
+            <ul class="lista-explicativa">
+                <li>Objeto agrupa dados em <strong>chave: valor</strong></li>
+                <li>Propriedade é o dado guardado</li>
+                <li>Método é uma função dentro do objeto</li>
+                <li><code>this</code> costuma apontar para o próprio objeto</li>
+                <li>Ponto e colchetes acessam propriedades</li>
+                <li><code>for...in</code> percorre chaves</li>
+                <li><code>Object.keys</code>, <code>values</code> e <code>entries</code> ajudam na inspeção</li>
+                <li><code>delete</code> remove propriedade</li>
+                <li>Objetos são atribuídos por referência</li>
+                <li><code>Object.assign</code> e spread fazem cópia rasa</li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

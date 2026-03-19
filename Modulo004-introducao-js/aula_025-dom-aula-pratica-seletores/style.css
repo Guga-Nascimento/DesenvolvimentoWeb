@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #111827, #1f2937);
+    color: #f9fafb;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.container {
+    width: min(1000px, 92%);
+    margin: 0 auto;
+}
+
+.topo {
+    padding: 40px 0 20px;
+}
+
+.topo h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+}
+
+.texto-titulo {
+    color: white;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.texto-centrar {
+    text-align: center;
+}
+
+#sumario {
+    font-size: 1.05rem;
+    color: #fde68a;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.cor-texto-noticia {
+    color: #d1d5db;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+#outras_noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.outra-noticia {
+    text-decoration: none;
+    color: #22d3ee;
+    transition: 0.2s;
+}
+
+.outra-noticia:hover {
+    text-decoration: underline;
+    color: #bef264;
+}
+
+.separador {
+    color: #94a3b8;
+}
+
+.caixa-formulario h2,
+.painel-explicacao h2 {
+    margin-bottom: 18px;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #e5e7eb;
+}
+
+.opcao {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: normal !important;
+}
+
+.caixa-formulario input {
+    margin-top: 4px;
+}
+
+.caixa-formulario input[type="text"],
+.caixa-formulario input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #475569;
+    background-color: #0f172a;
+    color: white;
+    outline: none;
+}
+
+.caixa-formulario input[type="text"]:focus,
+.caixa-formulario input[type="password"]:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.caixa-formulario input[type="submit"] {
+    padding: 12px 28px;
+    border-radius: 12px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.caixa-formulario input[type="submit"]:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.saida {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    padding: 18px;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+.bloco-explicacao {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #334155;
+}
+
+.bloco-explicacao:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.destaque {
+    color: #facc15;
+    font-weight: bold;
+}
+
+.mostrar-borda {
+    border: 2px solid #22c55e;
+    padding: 8px;
+    border-radius: 10px;
+}

@@ -1,0 +1,133 @@
+/* =====================================================
+   RESET BÁSICO
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   CORPO DA PÁGINA
+===================================================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    color: #1e293b;
+    min-height: 100vh;
+    padding: 30px 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* =====================================================
+   TÍTULO PRINCIPAL
+===================================================== */
+#titulo {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    color: white;
+    padding: 24px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    font-size: 2rem;
+}
+
+/* =====================================================
+   SUBTÍTULO
+===================================================== */
+#subtitulo {
+    background-color: white;
+    color: #1d4ed8;
+    padding: 18px 20px;
+    border-left: 6px solid #2563eb;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================================
+   PARÁGRAFOS
+===================================================== */
+.texto {
+    background-color: white;
+    padding: 18px 20px;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid #dbeafe;
+}
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+#botao {
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 0 18px;
+    transition: 0.25s;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+#botao:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+#botao:active {
+    transform: translateY(0);
+}
+
+/* =====================================================
+   CAIXA DE RESULTADO
+===================================================== */
+#resultado {
+    background-color: #f8fafc;
+    border: 2px dashed #93c5fd;
+    border-radius: 14px;
+    padding: 20px;
+    min-height: 90px;
+    font-size: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* =====================================================
+   DESTAQUE PARA CÓDIGO INLINE, SE APARECER
+===================================================== */
+code {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    #titulo {
+        font-size: 1.6rem;
+        padding: 20px;
+    }
+
+    #subtitulo,
+    .texto,
+    #resultado {
+        padding: 16px;
+    }
+
+    #botao {
+        width: 100%;
+    }
+}

@@ -1,0 +1,14 @@
+*{
+    background: rebeccapurple;
+    color: aliceblue;
+    padding: 0%;
+    margin: 0%;
+}
+li{
+    background: yellowgreen;
+    color: black;
+    margin: 10px;
+}
+footer{
+    background: rgb(22, 22, 20);
+}

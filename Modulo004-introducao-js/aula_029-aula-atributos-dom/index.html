@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Atributos HTML com JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="topo">
+            <h1>Manipulação de Atributos no DOM</h1>
+            <p class="subtitulo">
+                Aula prática com <code>getAttribute()</code>, <code>setAttribute()</code> e <code>removeAttribute()</code>.
+            </p>
+        </header>
+
+        <section class="card area-visual">
+            <h2>Elementos para teste</h2>
+
+            <div class="imagem-box">
+                <img id="imagem" src="images/image_1.jpg" alt="Imagem do oceano" title="Oceano">
+            </div>
+
+            <div class="link-box">
+                <a id="linkSite" href="https://www.nasa.gov/" target="_blank">
+                    Ver website
+                </a>
+            </div>
+        </section>
+
+        <section class="card controles">
+            <h2>Controles da aula</h2>
+
+            <div class="botoes">
+                <button id="btn-ver">Ver atributos</button>
+                <button id="btn-trocar-img">Trocar imagem</button>
+                <button id="btn-trocar-link">Trocar link</button>
+                <button id="btn-remover-link">Remover href</button>
+                <button id="btn-restaurar">Restaurar tudo</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Saída da explicação</h2>
+            <div id="saida" class="saida">
+                Clique em um botão para ver o resultado e entender o que aconteceu.
+            </div>
+        </section>
+
+        <section class="card explicacao">
+            <h2>Diferença importante</h2>
+            <p>
+                JavaScript é a linguagem que escreve os comandos.
+                DOM é a estrutura da página que o navegador entrega ao JavaScript.
+            </p>
+            <p>
+                Então, <code>getAttribute()</code>, <code>setAttribute()</code> e <code>removeAttribute()</code>
+                são recursos do DOM usados pelo JavaScript para ler e alterar atributos de elementos HTML.
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

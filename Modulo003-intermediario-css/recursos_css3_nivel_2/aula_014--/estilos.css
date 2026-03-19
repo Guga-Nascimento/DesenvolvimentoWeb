@@ -1,0 +1,22 @@
+/* folha de estilos de CSS3 */
+.container {
+    display: flex;
+}
+
+.container div{
+    width: 400px;
+    height: 600px;
+    box-shadow: inset 0 0 1px black;
+}
+
+.espaco-1 {
+    
+}
+
+.espaco-2 {
+
+}
+
+.espaco-3 {
+
+}

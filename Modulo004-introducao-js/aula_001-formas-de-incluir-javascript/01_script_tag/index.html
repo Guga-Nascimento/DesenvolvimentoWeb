@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Faz a página se adaptar ao tamanho da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript no Head</title>
+
+    <script>
+        /*
+            Este JavaScript está escrito diretamente dentro do <head>.
+
+            Como o navegador lê o <head> antes do <body>,
+            usamos o evento DOMContentLoaded para garantir
+            que o HTML já tenha sido carregado antes de manipular elementos.
+        */
+        document.addEventListener("DOMContentLoaded", function () {
+            // Seleciona o título pelo id
+            const titulo = document.getElementById("titulo");
+
+            // Altera o texto do título quando a página termina de carregar
+            titulo.textContent = "JavaScript carregado dentro do head com sucesso!";
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1 id="titulo">Título original da página</h1>
+
+    <p>
+        Neste exemplo, o JavaScript foi colocado dentro da tag
+        <code>&lt;script&gt;</code> no <code>&lt;head&gt;</code>.
+    </p>
+
+</body>
+
+</html>

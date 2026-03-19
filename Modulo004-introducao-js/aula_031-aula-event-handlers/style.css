@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    min-height: 100vh;
+    padding: 30px 16px;
+}
+
+code {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+.container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.topo {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.topo h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.subtitulo {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    margin-bottom: 14px;
+}
+
+.botoes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+#btn-alterar {
+    background: #38bdf8;
+    color: #082f49;
+}
+
+#btn-voltar {
+    background: #f59e0b;
+    color: #422006;
+}
+
+.saida {
+    background: #020617;
+    border-radius: 12px;
+    padding: 16px;
+    line-height: 1.7;
+    white-space: pre-line;
+    color: #dbeafe;
+    min-height: 140px;
+}
+
+.titulo-alterado {
+    color: #38bdf8;
+    transform: scale(1.03);
+}

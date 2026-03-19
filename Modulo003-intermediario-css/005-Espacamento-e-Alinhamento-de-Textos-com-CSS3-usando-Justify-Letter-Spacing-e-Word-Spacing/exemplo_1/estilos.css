@@ -1,0 +1,11 @@
+/* folha de estilos de CSS3 */
+body{
+    padding: 20px;
+}
+p{
+    text-align: justify;
+    /*line-height: 50px;*/
+    letter-spacing: 2em;
+    word-spacing: 1em;
+    
+}

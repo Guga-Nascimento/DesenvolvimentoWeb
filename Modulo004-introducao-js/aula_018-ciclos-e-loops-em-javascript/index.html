@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos e Loops em JavaScript</title>
+
+    <!-- Liga o arquivo CSS externo chamado estilo.css -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!--
+        Liga o arquivo JavaScript externo chamado script.js
+
+        O defer faz o navegador:
+        1. baixar o arquivo JavaScript
+        2. continuar lendo o HTML
+        3. executar o JS só depois que a página estiver pronta
+    -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ciclos e Loops em JavaScript</h1>
+
+        <p class="descricao">
+            Neste exemplo, você pode testar na prática os principais tipos de repetição do JavaScript.
+        </p>
+
+        <div class="painel">
+            <h2>Dados usados nos exemplos</h2>
+            <p id="dadosBase">Números: [1, 2, 3, 4, 5] | Nomes: ["joao", "ana", "carlos"]</p>
+        </div>
+
+        <div class="botoes">
+            <button id="btnWhile">Executar while</button>
+            <button id="btnDoWhile">Executar do...while</button>
+            <button id="btnFor">Executar for</button>
+            <button id="btnForIn">Executar for...in</button>
+            <button id="btnForOf">Executar for...of</button>
+            <button id="btnForEach">Executar forEach</button>
+            <button id="btnLimpar">Limpar resultado</button>
+        </div>
+
+        <div class="painel resultado-box">
+            <h2>Resultado</h2>
+            <p id="resultado">Clique em um botão para testar um loop.</p>
+        </div>
+
+        <div class="painel explicacao-box">
+            <h2>Funções e recursos usados no navegador</h2>
+            <ul>
+                <li><strong>document.getElementById()</strong> → procura um elemento do HTML pelo id.</li>
+                <li><strong>addEventListener()</strong> → faz o navegador esperar um evento, como clique.</li>
+                <li><strong>textContent</strong> → altera o texto mostrado dentro do elemento.</li>
+                <li><strong>JSON.stringify()</strong> → transforma array em texto para exibir melhor na tela.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

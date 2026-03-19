@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de DOM - Seletores e Manipulação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container">
+            <h1>Estudo de DOM na prática</h1>
+            <p class="subtitulo">
+                Seletores, className, classList, innerHTML e innerText explicados na própria tela.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article id="noticia" class="card">
+            <span class="etiqueta">Exemplo de notícia</span>
+
+            <p id="titulo" class="texto-titulo cor-titulo">
+                Vulcão no Alasca já devia ter acordado e agora sabemos porque ainda não aconteceu
+            </p>
+
+            <p id="sumario">
+                Os geólogos esperavam que o vulcão Westdahl Peak entrasse em erupção novamente em 2010,
+                mas ainda permanece intacto e inquieto.
+            </p>
+
+            <p id="texto" class="cor-texto-noticia">
+                Tentar avisar com precisão quando os vulcões vão explodir é um fator crucial,
+                mas complicado, para proteger as pessoas ao redor e reduzir os riscos da aviação.
+                <br><br>
+                A previsão vulcânica envolve muitas variáveis, incluindo profundidade da câmara de magma,
+                taxa de preenchimento e resistência das rochas.
+                <br><br>
+                <small>(a notícia continua...)</small>
+            </p>
+
+            <div id="outras_noticias">
+                <a href="#" class="outra-noticia">Notícia número um</a>
+                <span class="separador">|</span>
+                <a href="#" class="outra-noticia">Notícia número dois</a>
+                <span class="separador">|</span>
+                <a href="#" class="outra-noticia">Notícia número três</a>
+            </div>
+        </article>
+
+        <section class="caixa-formulario card">
+            <h2>Formulário para treinar DOM</h2>
+
+            <form id="form-login" action="#" method="post">
+                <div class="campo">
+                    <label for="usuario">Usuário:</label>
+                    <input id="usuario" type="text" name="text_usuario" value="usuário">
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha:</label>
+                    <input id="senha" type="password" name="text_senha" placeholder="Digite sua senha">
+                </div>
+
+                <div class="campo">
+                    <label class="opcao">
+                        <input type="radio" name="radio_login" value="nao" checked>
+                        <span>Não guardar dados automaticamente.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="radio_login" value="sim">
+                        <span>Guardar dados automaticamente.</span>
+                    </label>
+                </div>
+
+                <div class="campo">
+                    <input type="submit" value="Entrar">
+                </div>
+            </form>
+        </section>
+
+        <section class="painel-explicacao card">
+            <h2>Painel de estudo</h2>
+            <p>
+                Esta área será preenchida pelo JavaScript para mostrar, na prática,
+                o que cada seletor e cada propriedade faz.
+            </p>
+
+            <div id="saida" class="saida"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

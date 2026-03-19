@@ -1,0 +1,18 @@
+/* folha de estilos de CSS3 */
+li,dt,dd{
+    line-height: 24px;
+}
+.lista-desordenada{
+    list-style-type: none;
+    /*list-style-position: outside;
+    list-style-image: url(images/icon.png);*/
+
+}
+
+.lista-desordenada li{
+    background-image: url(images/icon.png);
+    background-position: 8px 8px;
+    background-size: .5em .5em;
+    background-repeat: no-repeat;
+    padding-left: 18px;
+}

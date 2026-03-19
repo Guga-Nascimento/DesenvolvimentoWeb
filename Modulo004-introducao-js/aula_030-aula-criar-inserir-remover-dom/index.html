@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Criação e Remoção de Elementos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="pagina">
+        <header class="topo">
+            <h1>Criar, inserir e remover elementos no DOM</h1>
+            <p class="subtitulo">
+                Aula prática com <code>createElement()</code>, <code>append()</code>,
+                <code>before()</code>, <code>after()</code>, <code>prepend()</code>,
+                <code>appendChild()</code> e <code>remove()</code>.
+            </p>
+        </header>
+
+        <section class="painel">
+            <h2>Controles da aula</h2>
+            <div class="botoes">
+                <button id="btn-criar-paragrafo">Criar parágrafo no elemento 1</button>
+                <button id="btn-criar-div">Criar novo elemento 4</button>
+                <button id="btn-before">Adicionar antes do elemento 2</button>
+                <button id="btn-prepend">Adicionar no início do elemento 2</button>
+                <button id="btn-append">Adicionar no fim do elemento 2</button>
+                <button id="btn-after">Adicionar depois do elemento 2</button>
+                <button id="btn-remover">Remover elemento 1</button>
+                <button id="btn-resetar">Resetar aula</button>
+            </div>
+        </section>
+
+        <section id="area-elementos" class="area-elementos">
+            <div class="elemento" id="elemento_1">
+                <h2>Título do elemento 1</h2>
+            </div>
+
+            <div class="elemento" id="elemento_2">
+                <h2>Título do elemento 2</h2>
+            </div>
+
+            <div class="elemento" id="elemento_3">
+                <h2>Título do elemento 3</h2>
+            </div>
+        </section>
+
+        <section class="saida-box">
+            <h2>Explicação na tela</h2>
+            <div id="saida" class="saida">
+                Clique em um botão para ver o que acontece no DOM.
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

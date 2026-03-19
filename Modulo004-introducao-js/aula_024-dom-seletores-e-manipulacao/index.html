@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de DOM - Seletores e Manipulação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="cabecalho">
+            <span class="tag-estudo">Aula prática de JavaScript + DOM</span>
+            <h1>Seletores do DOM e manipulação de conteúdo</h1>
+            <p class="subtitulo">
+                Nesta página, você vê na prática como o JavaScript encontra elementos no HTML
+                e altera texto, classes e conteúdo visualmente no navegador.
+            </p>
+        </header>
+
+        <section class="painel-explicativo">
+            <h2>O que vamos estudar nesta tela</h2>
+            <div class="cards-conceitos">
+                <article class="card-conceito">
+                    <h3>JavaScript</h3>
+                    <p>
+                        É a linguagem. Com ela, criamos variáveis, condições, funções, laços e lógica.
+                    </p>
+                </article>
+                <article class="card-conceito">
+                    <h3>DOM</h3>
+                    <p>
+                        É uma estrutura do navegador que representa o HTML em forma de objetos.
+                    </p>
+                </article>
+                <article class="card-conceito">
+                    <h3>Navegador</h3>
+                    <p>
+                        É ele quem fornece recursos como <code>document</code>, eventos, formulário e tela.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <article id="noticia" class="bloco bloco-noticia">
+            <div class="bloco-topo">
+                <span class="marcador">Exemplo real para seleção no DOM</span>
+                <h2 id="titulo" class="texto-titulo destaque-titulo">
+                    Vulcão no Alasca já devia ter acordado e agora sabemos porque ainda não aconteceu
+                </h2>
+            </div>
+
+            <p id="sumario">
+                Os geólogos esperavam que o vulcão Westdahl Peak entrasse em erupção novamente em 2010,
+                mas ainda permanece intacto e inquieto – apontando para falhas nos nossos modelos preditivos.
+            </p>
+
+            <p id="texto" class="cor-texto-noticia texto-explicativo-noticia">
+                Tentar avisar com precisão quando os vulcões vão explodir é um fator crucial, mas complicado,
+                para proteger as pessoas ao redor e reduzir os riscos da aviação. Tantos fatores devem ser
+                considerados, e esta falta de explosão destacou um que tem sido negligenciado.
+                <br><br>
+                “A previsão vulcânica envolve muitas variáveis, incluindo a profundidade e o tamanho da câmara de magma,
+                a taxa na qual o magma preenche essa câmara e a força das rochas que contêm a câmara, para citar algumas”.
+                <br><br>
+                Localizado no oeste do Alasca, ao longo da cadeia das Ilhas Aleutas, o vulcão Westdahl Peak Shield
+                explodiu pela última vez numa série de erupções entre 1991 e 1992.
+                <br><br>
+                <small>(a notícia continua...)</small>
+            </p>
+
+            <div id="outras_noticias" class="barra-noticias">
+                <a href="#" class="outra-noticia">Notícia número um</a>
+                <span class="separador">|</span>
+                <a href="#" class="outra-noticia">Notícia número dois</a>
+                <span class="separador">|</span>
+                <a href="#" class="outra-noticia">Notícia número três</a>
+            </div>
+        </article>
+
+        <section class="bloco caixa-formulario">
+            <div class="bloco-topo">
+                <span class="marcador">Exemplo com formulário</span>
+                <h2>Login de estudo</h2>
+            </div>
+
+            <form action="#" method="post" id="form-login">
+                <div class="campo">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" name="text_usuario" placeholder="Digite seu usuário">
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="text_senha" placeholder="Digite sua senha">
+                </div>
+
+                <div class="campo campo-radio">
+                    <label>
+                        <input type="radio" name="radio_login" value="nao" checked>
+                        <span>Não guardar dados automaticamente.</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="radio_login" value="sim">
+                        <span>Guardar dados automaticamente.</span>
+                    </label>
+                </div>
+
+                <div class="acoes-formulario">
+                    <input type="submit" value="Entrar">
+                </div>
+            </form>
+        </section>
+
+        <section class="bloco painel-dom">
+            <div class="bloco-topo">
+                <span class="marcador">Resultado do JavaScript na tela</span>
+                <h2>Leitura dos seletores do DOM</h2>
+            </div>
+
+            <div class="cards-dom">
+                <article class="card-resultado" id="resultado-id">
+                    <h3>getElementById</h3>
+                    <p class="linha-resultado">Aguardando leitura...</p>
+                </article>
+
+                <article class="card-resultado resultado-classe">
+                    <h3>getElementsByClassName</h3>
+                    <p class="linha-resultado">Aguardando leitura...</p>
+                </article>
+
+                <article class="card-resultado" id="resultado-name">
+                    <h3>getElementsByName</h3>
+                    <p class="linha-resultado">Aguardando leitura...</p>
+                </article>
+
+                <article class="card-resultado" id="resultado-tag">
+                    <h3>getElementsByTagName</h3>
+                    <p class="linha-resultado">Aguardando leitura...</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="bloco painel-propriedades">
+            <div class="bloco-topo">
+                <span class="marcador">Manipulação visual</span>
+                <h2>className, classList, innerText e innerHTML</h2>
+            </div>
+
+            <div class="area-demonstracao">
+                <div id="caixa-propriedades" class="caixa-demo caixa-inicial">
+                    Esta caixa será alterada pelo JavaScript.
+                </div>
+
+                <div id="explicacao-propriedades" class="explicacao-visual">
+                    O script ainda vai preencher esta área.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

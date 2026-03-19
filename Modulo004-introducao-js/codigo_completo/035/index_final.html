@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: gray;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 
+        onclick="outra_funcao(event)"
+        oncontextmenu="alert('clique com o botão direito')"
+        onmouseenter="console.log('entrou')"
+        onmousemove="console.log('moviento')"
+        onmouseout="console.log('saiu')">Texto do título desta página</h1>
+    
+    <!-- <button onclick="console.log('click')">Alterar texto</button> -->
+
+
+    <!-- <button onclick="function clique (){
+        console.log('click')
+    }">Alterar texto</button> -->
+
+    <!-- <button onclick="function clique (){
+        console.log('click')
+    }; clique()">Alterar texto</button> -->
+
+
+    <!-- <button onclick="funcao()">Alterar texto</button> -->
+
+    <button onclick="alterar_texto()">Alterar texto</button>
+
+    
+    <script src="script_final.js"></script>
+</body>
+</html>

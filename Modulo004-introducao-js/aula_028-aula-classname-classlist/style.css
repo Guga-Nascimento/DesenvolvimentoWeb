@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    min-height: 100vh;
+    padding: 30px 16px;
+}
+
+code {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.topo {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.topo h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.container {
+    margin: 0 auto 24px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 24px;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.container h2 {
+    margin-bottom: 12px;
+}
+
+.container p {
+    line-height: 1.7;
+}
+
+.container-dark {
+    border: 1px solid gray;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+.container-light {
+    border: 1px solid gray;
+    background-color: white;
+    color: black;
+}
+
+.painel,
+.explicacao {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.painel h2,
+.explicacao h2 {
+    margin-bottom: 14px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.saida {
+    background: #020617;
+    border-radius: 12px;
+    padding: 16px;
+    line-height: 1.7;
+    white-space: pre-line;
+    color: #dbeafe;
+}
+
+.visivel {
+    display: block;
+}
+
+.invisivel {
+    display: none;
+}

@@ -1,0 +1,221 @@
+/* 
+  Seleciona TODOS os elementos da página.
+  Muito usado para resetar estilos padrões do navegador.
+*/
+* {
+  margin: 0;              /* remove a margem externa padrão */
+  padding: 0;             /* remove o espaçamento interno padrão */
+  box-sizing: border-box; /* faz largura e altura incluírem padding e borda */
+}
+
+/* 
+  Estilo geral do corpo da página.
+*/
+body {
+  background-color: #222;                 /* define o fundo escuro da página */
+  font-family: Arial, Helvetica, sans-serif; /* define a fonte do texto */
+  padding: 8px;                           /* cria um espaço interno ao redor de todo o conteúdo */
+}
+
+/* 
+  Container principal do layout.
+  Aqui o Grid é ativado.
+*/
+.container {
+  height: 95vh;               /* altura de 95% da altura visível da tela */
+  border: 6px solid #f2f2f2; /* borda clara ao redor do container */
+  background-color: #f2f2f2; /* fundo claro entre os elementos do grid */
+  display: grid;             /* ativa o CSS Grid */
+
+  /* 
+    Cria 4 colunas:
+    - 3 colunas com tamanhos iguais (1fr)
+    - 1 coluna fixa de 230px para o aside
+  */
+  grid-template-columns: 1fr 1fr 1fr 230px;
+
+  /* 
+    Cria 4 linhas:
+    - header com 110px
+    - linha dos textos com 140px
+    - conteúdo principal ocupando o espaço restante (1fr)
+    - footer com 80px
+  */
+  grid-template-rows: 110px 140px 1fr 80px;
+
+  /* 
+    Define as áreas nomeadas do layout.
+    Visualmente:
+    linha 1 -> header ocupa tudo
+    linha 2 -> text1, text2, text3 e aside
+    linha 3 -> content ocupa 3 colunas e aside continua ao lado
+    linha 4 -> footer ocupa tudo
+  */
+  grid-template-areas:
+    "header header header header"
+    "text1  text2  text3  aside"
+    "content content content aside"
+    "footer footer footer footer";
+
+  gap: 6px; /* espaço entre as células do grid */
+}
+
+/* 
+  Classe base usada em várias caixas.
+  Centraliza o conteúdo com Flexbox.
+*/
+.box {
+  display: flex;          /* ativa flexbox */
+  align-items: center;    /* centraliza na vertical */
+  justify-content: center;/* centraliza na horizontal */
+  font-size: 2rem;        /* tamanho da fonte */
+  font-weight: bold;      /* texto em negrito */
+  color: white;           /* cor do texto */
+}
+
+/* 
+  Área do cabeçalho.
+*/
+.header {
+  grid-area: header; /* liga essa classe à área "header" do grid */
+
+  /* fundo em degradê da esquerda para a direita */
+  background: linear-gradient(90deg, #4a004d, #5e005e);
+
+  display: flex;               /* ativa flexbox */
+  align-items: center;         /* centraliza os itens verticalmente */
+  justify-content: space-between; /* coloca um item na esquerda e outro na direita */
+  padding: 0 18px 0 36px;      /* espaçamento interno: topo direita baixo esquerda */
+}
+
+/* 
+  Estilo do título dentro do header.
+*/
+.header h1 {
+  font-size: 2rem; /* tamanho do texto */
+  color: white;    /* cor branca */
+}
+
+/* 
+  Caixa pequena "img" que fica no header.
+*/
+.img-box {
+  width: 110px;   /* largura fixa */
+  height: 80px;   /* altura fixa */
+
+  /* degradê vertical */
+  background: linear-gradient(180deg, #ff00ff, #b300ff);
+
+  display: flex;            /* ativa flexbox */
+  align-items: center;      /* centraliza verticalmente */
+  justify-content: center;  /* centraliza horizontalmente */
+  font-size: 1.7rem;        /* tamanho da fonte */
+  font-weight: bold;        /* negrito */
+  color: white;             /* cor do texto */
+}
+
+/* 
+  Primeira caixa de texto.
+*/
+.text1 {
+  grid-area: text1; /* ocupa a área "text1" no grid */
+  background: linear-gradient(180deg, #5a00a3, #4b0082); /* fundo em degradê */
+}
+
+/* 
+  Segunda caixa de texto.
+*/
+.text2 {
+  grid-area: text2; /* ocupa a área "text2" */
+  background: linear-gradient(180deg, #a100ff, #6a00d4);
+}
+
+/* 
+  Terceira caixa de texto.
+*/
+.text3 {
+  grid-area: text3; /* ocupa a área "text3" */
+  background: linear-gradient(180deg, #5d5dff, #4b4bff);
+}
+
+/* 
+  Área principal do conteúdo.
+*/
+.content {
+  grid-area: content; /* ocupa a área "content" no grid */
+
+  background: linear-gradient(180deg, #5b5bff, #4e4ef0); /* fundo degradê */
+  color: white;       /* cor do texto */
+  padding: 24px;      /* espaço interno */
+
+  overflow-y: auto;   /* ativa rolagem vertical quando o conteúdo ultrapassar a altura */
+  display: block;     /* mantém o elemento como bloco */
+}
+
+/* 
+  Título dentro da área content.
+*/
+.content h2 {
+  text-align: center;   /* centraliza o texto */
+  margin-bottom: 20px;  /* espaço abaixo do título */
+  font-size: 2.2rem;    /* tamanho da fonte */
+}
+
+/* 
+  Parágrafos dentro do content.
+*/
+.content p {
+  font-size: 1.1rem;    /* tamanho da fonte */
+  line-height: 1.6;     /* altura entre linhas, melhora leitura */
+  margin-bottom: 14px;  /* espaço abaixo de cada parágrafo */
+}
+
+/* 
+  Barra lateral direita.
+*/
+.aside {
+  grid-area: aside; /* ocupa a área "aside" */
+  background: linear-gradient(180deg, #1565c0, #0d47a1); /* fundo degradê azul */
+  color: white; /* texto branco */
+}
+
+/* 
+  Rodapé.
+*/
+.footer {
+  grid-area: footer; /* ocupa a área "footer" */
+  background: linear-gradient(90deg, #4a004d, #5e005e); /* fundo degradê horizontal */
+
+  justify-content: flex-start; /* joga o texto para a esquerda */
+  padding-left: 36px;          /* espaço à esquerda */
+}
+
+/* 
+  Personaliza a largura da barra de rolagem
+  em navegadores baseados em WebKit (Chrome, Edge, etc.).
+*/
+.content::-webkit-scrollbar {
+  width: 12px; /* largura da barra */
+}
+
+/* 
+  Fundo da trilha da barra de rolagem.
+*/
+.content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2); /* fundo claro e transparente */
+}
+
+/* 
+  Parte que desliza na barra de rolagem.
+*/
+.content::-webkit-scrollbar-thumb {
+  background: #2d2d2d;   /* cor da "alça" da barra */
+  border-radius: 10px;   /* deixa arredondada */
+}
+
+/* 
+  Cor da alça quando o mouse passa por cima.
+*/
+.content::-webkit-scrollbar-thumb:hover {
+  background: #111; /* deixa mais escura no hover */
+}

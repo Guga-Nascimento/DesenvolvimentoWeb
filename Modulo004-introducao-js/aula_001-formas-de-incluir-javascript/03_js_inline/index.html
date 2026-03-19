@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Faz a página se adaptar ao tamanho da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Inline</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Título original da página</h1>
+
+    <p>
+        Neste exemplo, o JavaScript foi escrito diretamente no elemento HTML,
+        usando o atributo <code>onclick</code>.
+    </p>
+
+    <!--
+        JavaScript inline = código escrito diretamente na tag HTML.
+        Quando o botão for clicado, o texto do h1 será alterado.
+    -->
+    <button onclick="document.getElementById('titulo').textContent = 'Texto alterado com JavaScript inline!';">
+        Clique aqui
+    </button>
+
+</body>
+
+</html>

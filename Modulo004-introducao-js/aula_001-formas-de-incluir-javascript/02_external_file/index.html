@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Faz a página se adaptar ao tamanho da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Externo</title>
+
+    <!--
+        Aqui o HTML busca um arquivo JavaScript externo.
+
+        O atributo "defer" faz o navegador:
+        1. baixar o arquivo JS
+        2. continuar lendo o HTML
+        3. executar o JS só depois que o HTML estiver pronto
+    -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <h1 id="titulo">Título original da página</h1>
+
+    <p>
+        Neste exemplo, o JavaScript não está escrito no HTML.
+        Ele está em um arquivo separado chamado <strong>script.js</strong>.
+    </p>
+
+</body>
+
+</html>

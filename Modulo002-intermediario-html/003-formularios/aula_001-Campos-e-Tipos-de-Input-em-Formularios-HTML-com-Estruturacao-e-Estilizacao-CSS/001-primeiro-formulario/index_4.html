@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Buttons</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            padding: 30px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #1f3c88;
+        }
+
+        .grupo-titulo {
+            margin: 20px 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .btn-enviar {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #1f3c88;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-enviar:hover {
+            background-color: #162d66;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Formulário</h2>
+
+        <form action="https://sys4soft.com/udemy/forms/index.php" method="post">
+
+            <div class="grupo-titulo">Sexo</div>
+
+            <label class="opcao" for="masculino">
+                <input type="radio" id="masculino" name="sexo" value="masculino" checked>
+                Masculino
+            </label>
+
+            <label class="opcao" for="feminino">
+                <input type="radio" id="feminino" name="sexo" value="feminino">
+                Feminino
+            </label>
+
+            <div class="grupo-titulo">Sistema Operacional</div>
+
+            <label class="opcao" for="windows">
+                <input type="radio" id="windows" name="sistema" value="windows" checked>
+                Windows
+            </label>
+
+            <label class="opcao" for="mac">
+                <input type="radio" id="mac" name="sistema" value="mac">
+                Mac
+            </label>
+
+            <label class="opcao" for="linux">
+                <input type="radio" id="linux" name="sistema" value="linux">
+                Linux
+            </label>
+
+            <input class="btn-enviar" type="submit" value="Enviar">
+        </form>
+    </div>
+
+</body>
+
+</html>

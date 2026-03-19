@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Textarea</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h3>Formulário</h3>
+
+        <form action="https://sys4soft.com/udemy/forms/index.php" method="post">
+
+            <div class="form-group">
+                <label for="campo_texto">Digite sua mensagem:</label>
+
+                <!--
+                    textarea cria uma área de texto maior
+
+                    name="campo_texto"
+                    -> nome do campo enviado no formulário
+
+                    id="campo_texto"
+                    -> identifica o campo e liga com a label
+
+                    rows="10"
+                    -> quantidade de linhas visíveis
+
+                    cols="30"
+                    -> largura aproximada em caracteres
+
+                    placeholder
+                    -> texto de ajuda dentro da caixa
+
+                    required
+                    -> obriga o preenchimento
+                -->
+                <textarea 
+                    name="campo_texto" 
+                    id="campo_texto" 
+                    rows="10" 
+                    cols="30"
+                    placeholder="Digite sua mensagem aqui"
+                    required></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Enviar">
+            </div>
+
+        </form>
+
+        <div class="info-box">
+            <h4>O que estamos fazendo aqui?</h4>
+            <p>
+                Estamos usando a tag <strong>textarea</strong> para criar uma
+                caixa de texto maior do que um input comum.
+            </p>
+            <p>
+                Esse campo é usado quando o usuário precisa escrever
+                mensagens, observações, comentários ou descrições.
+            </p>
+            <p>
+                No navegador, aparece uma área de digitação com várias linhas,
+                permitindo escrever mais conteúdo.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

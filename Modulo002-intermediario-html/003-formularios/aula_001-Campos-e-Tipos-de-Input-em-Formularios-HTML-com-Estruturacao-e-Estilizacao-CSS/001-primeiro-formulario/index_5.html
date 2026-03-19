@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Range Básico</title>
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            padding: 30px;
+        }
+
+        /* Caixa principal */
+        .form-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Título */
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #1f3c88;
+        }
+
+        /* Grupo do formulário */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Label */
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Input range */
+        .form-group input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        /* Texto explicativo */
+        .explicacao {
+            margin-top: 12px;
+            background-color: #eef3ff;
+            border-left: 4px solid #1f3c88;
+            padding: 12px;
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+
+        /* Botão */
+        .btn-enviar {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1f3c88;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-enviar:hover {
+            background-color: #162d66;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Exemplo com Input Range</h2>
+
+        <form action="https://sys4soft.com/udemy/forms/index.php" method="post">
+
+            <div class="form-group">
+                <label for="volume">Escolha um valor de 0 até 100</label>
+
+                <!--
+                    type="range" cria uma barra deslizante
+                    name="volume" é o nome do campo enviado
+                    id="volume" identifica o campo
+                    min="0" define o menor valor
+                    max="100" define o maior valor
+                    step="5" faz o valor variar de 5 em 5
+                    value="50" define o valor inicial
+                -->
+                <input
+                    type="range"
+                    name="volume"
+                    id="volume"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value="50"
+                >
+
+                <div class="explicacao">
+                    O campo <strong>range</strong> serve para o usuário escolher um valor
+                    dentro de um intervalo arrastando uma barra.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input class="btn-enviar" type="submit" value="Enviar">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

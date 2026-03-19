@@ -1,0 +1,49 @@
+/* folha de estilos de CSS3 */
+
+div {
+    margin: 10px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.espaco-1 {
+    background: linear-gradient(75deg, red, yellow);
+
+    
+}
+
+.espaco-2 {
+    background-image: url(images/fundo.jpg);
+    background-size: 100% 100%;
+    
+}
+
+.espaco-3 {
+    background-image: url(images/outro_fundo.jpg);
+    background-repeat: repeat-x;
+    
+}
+.espaco-4{
+   /* background: linear-gradient(45deg, blue, green, black);*/
+    background: linear-gradient(to left top, blue, green, black);
+}
+
+.espaco-5{
+    background: linear-gradient(red 0, orange 25%, green 75%, blue 100%);
+
+}
+
+.espaco-6{
+    background: linear-gradient(rgb(47, 46, 54), rgb(14, 12, 27));
+
+}
+body{
+    padding: 20px;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(rgb(71,77,97), rgb(17,18,24));
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}

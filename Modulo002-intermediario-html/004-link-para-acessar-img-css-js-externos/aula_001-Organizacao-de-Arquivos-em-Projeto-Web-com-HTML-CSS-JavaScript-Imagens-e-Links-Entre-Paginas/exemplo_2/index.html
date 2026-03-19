@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carregar ficheiros externos</title>
+
+    <!-- liga o CSS -->
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <!-- liga o JavaScript -->
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <h1>Carregar ficheiros externos</h1>
+
+    <p>
+        Nesta página estamos a aprender como ligar um ficheiro CSS,
+        um ficheiro JavaScript, uma imagem e também links para outras páginas.
+    </p>
+
+    <!-- carrega a imagem -->
+    <img src="assets/images/img_100_100.jpg" alt="Imagem de exemplo">
+
+    <div>
+        <a href="outras_paginas/noticias.html">Notícias</a>
+    </div>
+
+    <div>
+        <a href="outras_paginas/servicos.html">Serviços</a>
+    </div>
+
+    <div class="caixa-explicacao">
+        <h2>O que está a acontecer aqui?</h2>
+        <p><strong>HTML</strong>: cria a estrutura da página.</p>
+        <p><strong>CSS</strong>: altera o visual da página.</p>
+        <p><strong>JavaScript</strong>: adiciona comportamento.</p>
+        <p><strong>Imagem</strong>: é carregada pela tag img.</p>
+        <p><strong>Links</strong>: abrem outras páginas da pasta outras_paginas.</p>
+    </div>
+
+    <button onclick="mostrarMensagem()">Testar JavaScript</button>
+</body>
+</html>

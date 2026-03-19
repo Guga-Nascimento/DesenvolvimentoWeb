@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Arrays</title>
+
+    <!-- Liga o arquivo CSS externo chamado estilo.css -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!--
+        Liga o arquivo JavaScript externo chamado script.js
+
+        O atributo defer faz o navegador:
+        1. baixar o JavaScript
+        2. continuar lendo o HTML
+        3. executar o JS só depois que a página estiver pronta
+    -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Métodos de Arrays</h1>
+
+        <p class="descricao">
+            Este exemplo mostra, na prática, como usar alguns métodos importantes de arrays no JavaScript.
+        </p>
+
+        <div class="painel">
+            <h2>Array original</h2>
+            <p id="arrayOriginal">["joao", "ana", "carlos"]</p>
+        </div>
+
+        <div class="botoes">
+            <button id="btnSlice">Usar slice()</button>
+            <button id="btnConcat">Usar concat()</button>
+            <button id="btnIncludes">Usar includes()</button>
+            <button id="btnIndexOf">Usar indexOf()</button>
+            <button id="btnJoin">Usar join()</button>
+            <button id="btnResetar">Resetar</button>
+        </div>
+
+        <div class="painel">
+            <h2>Resultado</h2>
+            <p id="resultado">Clique em um botão para testar um método do array.</p>
+        </div>
+
+        <div class="painel explicacao-box">
+            <h2>O que o JavaScript usa aqui no navegador?</h2>
+            <ul>
+                <li><strong>document.getElementById()</strong> → pega um elemento do HTML pelo id.</li>
+                <li><strong>addEventListener()</strong> → fica “escutando” um evento, como clique no botão.</li>
+                <li><strong>textContent</strong> → troca o texto que aparece dentro do elemento.</li>
+                <li><strong>JSON.stringify()</strong> → transforma array ou objeto em texto para exibir na tela.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

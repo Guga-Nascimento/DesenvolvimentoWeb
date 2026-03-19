@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de className e classList</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="pagina">
+        <header class="topo">
+            <h1>className e classList no DOM</h1>
+            <p class="subtitulo">
+                Aula prática para entender como o JavaScript manipula classes CSS.
+            </p>
+        </header>
+
+        <section id="caixa" class="container container-dark">
+            <h2>Título da seção</h2>
+            <p>
+                Este bloco começa com as classes
+                <code>container</code> e <code>container-dark</code>.
+            </p>
+        </section>
+
+        <section class="painel">
+            <h2>Controles da aula</h2>
+
+            <div class="botoes">
+                <button id="btn-classname">Trocar com className</button>
+                <button id="btn-add">Adicionar light</button>
+                <button id="btn-remove">Remover light</button>
+                <button id="btn-toggle">Alternar dark/light</button>
+                <button id="btn-check">Verificar classe</button>
+            </div>
+
+            <div id="saida" class="saida">
+                Clique em um botão para ver o resultado na tela.
+            </div>
+        </section>
+
+        <section class="explicacao">
+            <h2>Diferença importante</h2>
+            <p>
+                <strong>JavaScript</strong> é a linguagem que escreve a instrução.
+                <strong>DOM</strong> é a estrutura da página que o navegador entrega ao JavaScript.
+            </p>
+            <p>
+                Então, <code>className</code> e <code>classList</code> não são “coisas do CSS”.
+                Eles são recursos do elemento no DOM, usados pelo JavaScript para alterar as classes.
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

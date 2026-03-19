@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Event Handlers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="topo">
+            <h1 id="titulo">Texto do título desta página</h1>
+            <p class="subtitulo">
+                Aula prática para entender como um botão reage a um clique com JavaScript.
+            </p>
+        </header>
+
+        <section class="card controles">
+            <h2>Controles da aula</h2>
+
+            <div class="botoes">
+                <button id="btn-alterar">Alterar texto</button>
+                <button id="btn-voltar">Voltar ao original</button>
+            </div>
+        </section>
+
+        <section class="card explicacao">
+            <h2>O que está acontecendo aqui?</h2>
+            <p>
+                Quando você clica no botão, um evento acontece. O JavaScript escuta esse evento
+                e executa uma função.
+            </p>
+            <p>
+                Neste exemplo, vamos usar <code>addEventListener()</code> para reagir ao clique.
+            </p>
+        </section>
+
+        <section class="card painel">
+            <h2>Saída da explicação</h2>
+            <div id="saida" class="saida">
+                Clique em um botão para ver a ação acontecendo na tela.
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

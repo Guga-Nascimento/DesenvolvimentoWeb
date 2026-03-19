@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Flexbox</title>
+
+    <style>
+        /*
+            RESET BÁSICO
+            Remove margens padrão e melhora o controle do layout
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f7;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        /*
+            CONTAINER PRINCIPAL
+            display: flex
+            -> transforma os elementos filhos em itens flexíveis
+        */
+        .container {
+            display: flex;
+
+            /*
+                flex-direction: row
+                -> coloca os itens em linha, da esquerda para a direita
+            */
+            flex-direction: row;
+
+            /*
+                flex-wrap: nowrap
+                -> impede quebra de linha
+                -> se faltar espaço, os itens tentam encolher
+            */
+            flex-wrap: nowrap;
+
+            /*
+                flex-flow é o atalho de:
+                flex-direction + flex-wrap
+
+                Exemplo equivalente:
+                flex-flow: row nowrap;
+            */
+            flex-flow: row nowrap;
+
+            /*
+                gap
+                -> cria espaço ENTRE os itens flex
+                -> evita usar margin manual em cada bloco
+            */
+            gap: 10px;
+
+            /*
+                justify-content
+                -> alinha os itens no eixo principal
+                -> como está em row, o eixo principal é horizontal
+            */
+            justify-content: space-between;
+
+            /*
+                align-items
+                -> alinha os itens no eixo cruzado
+                -> como está em row, o eixo cruzado é vertical
+            */
+            align-items: stretch;
+
+            background-color: #dde5e6;
+            padding: 15px;
+            border: 2px solid #b7c3c4;
+            margin-bottom: 30px;
+        }
+
+        /*
+            ESTILO GERAL DOS ITENS
+        */
+        .item {
+            padding: 20px;
+            width: 25%;
+            text-align: center;
+            border: 1px solid #7f8c8d;
+        }
+
+        .child-1 {
+            background-color: #cad5d6;
+
+            /*
+                order
+                -> altera a ordem visual do item
+                -> menor número aparece antes
+            */
+            order: 1;
+
+            /*
+                flex-shrink
+                -> define quanto o item pode encolher
+                -> quanto maior o número, mais ele encolhe
+            */
+            flex-shrink: 2;
+        }
+
+        .child-2 {
+            background-color: #b4c1c2;
+            order: 2;
+
+            /*
+                flex-grow: 1;
+                -> faria este item crescer para ocupar espaço sobrando
+            */
+        }
+
+        .child-3 {
+            background-color: #9facad;
+            order: 4;
+        }
+
+        .child-4 {
+            background-color: #849192;
+            order: 3;
+        }
+
+        /*
+            SEGUNDO EXEMPLO
+            Mostrando crescimento dos itens
+        */
+        .container-grow {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            background-color: #e8eeee;
+            padding: 15px;
+            border: 2px solid #c2cdce;
+        }
+
+        .grow-item {
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #7f8c8d;
+            background-color: #cfd8dc;
+
+            /*
+                flex-basis
+                -> define tamanho inicial do item antes do crescimento/encolhimento
+            */
+            flex-basis: 120px;
+        }
+
+        .grow-1 {
+            flex-grow: 1;
+        }
+
+        .grow-2 {
+            flex-grow: 2;
+        }
+
+        .grow-3 {
+            flex-grow: 1;
+        }
+
+        /*
+            TERCEIRO EXEMPLO
+            Mostrando quebra de linha com wrap
+        */
+        .container-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #eef3f3;
+            padding: 15px;
+            border: 2px solid #d0dada;
+            margin-bottom: 30px;
+        }
+
+        .wrap-item {
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #7f8c8d;
+            background-color: #d9e2e3;
+        }
+
+        /*
+            QUARTO EXEMPLO
+            Mostrando alinhamento com justify-content
+        */
+        .container-justify {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background-color: #edf2f2;
+            padding: 15px;
+            border: 2px solid #c9d4d5;
+        }
+
+        .justify-item {
+            width: 100px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #7f8c8d;
+            background-color: #bcc9ca;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Estudo de Flexbox</h1>
+    <p>
+        Exemplo prático com <strong>order</strong>, <strong>gap</strong>,
+        <strong>flex-wrap</strong>, <strong>flex-grow</strong>,
+        <strong>flex-shrink</strong> e outros recursos importantes.
+    </p>
+
+    <!--
+        EXEMPLO 1
+        Ordem visual dos elementos + gap + nowrap
+    -->
+    <h2>Exemplo 1 - Ordem dos itens com order</h2>
+    <section class="container">
+        <div class="item child-1">
+            <h1>A</h1>
+        </div>
+
+        <div class="item child-2">
+            <h1>B</h1>
+        </div>
+
+        <div class="item child-3">
+            <h1>C</h1>
+        </div>
+
+        <div class="item child-4">
+            <h1>D</h1>
+        </div>
+    </section>
+
+    <!--
+        EXEMPLO 2
+        Crescimento proporcional com flex-grow
+    -->
+    <h2>Exemplo 2 - Crescimento com flex-grow</h2>
+    <section class="container-grow">
+        <div class="grow-item grow-1">Item 1</div>
+        <div class="grow-item grow-2">Item 2</div>
+        <div class="grow-item grow-3">Item 3</div>
+    </section>
+
+    <!--
+        EXEMPLO 3
+        Quebra de linha com flex-wrap
+    -->
+    <h2>Exemplo 3 - Quebra de linha com flex-wrap</h2>
+    <section class="container-wrap">
+        <div class="wrap-item">Bloco 1</div>
+        <div class="wrap-item">Bloco 2</div>
+        <div class="wrap-item">Bloco 3</div>
+        <div class="wrap-item">Bloco 4</div>
+        <div class="wrap-item">Bloco 5</div>
+        <div class="wrap-item">Bloco 6</div>
+    </section>
+
+    <!--
+        EXEMPLO 4
+        Alinhamento horizontal com justify-content
+    -->
+    <h2>Exemplo 4 - Alinhamento com justify-content</h2>
+    <section class="container-justify">
+        <div class="justify-item">1</div>
+        <div class="justify-item">2</div>
+        <div class="justify-item">3</div>
+    </section>
+
+</body>
+</html>

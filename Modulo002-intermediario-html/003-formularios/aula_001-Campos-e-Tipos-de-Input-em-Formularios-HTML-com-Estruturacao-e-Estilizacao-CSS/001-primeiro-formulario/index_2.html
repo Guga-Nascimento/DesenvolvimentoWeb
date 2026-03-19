@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            padding: 30px;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-container h2 {
+            margin-bottom: 25px;
+            text-align: center;
+            color: #1f3c88;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cfd6dd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #1f3c88;
+            box-shadow: 0 0 0 3px rgba(31, 60, 136, 0.15);
+        }
+
+        .form-inline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .form-inline input {
+            width: auto;
+        }
+
+        .btn-enviar {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1f3c88;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-enviar:hover {
+            background-color: #162d66;
+        }
+
+        hr {
+            margin: 25px 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Formulário</h2>
+
+        <form action="https://sys4soft.com/udemy/forms/index.php" method="post">
+
+            <div class="form-group">
+                <label for="campo_texto">Nome</label>
+                <input type="text" id="campo_texto" name="campo_texto" minlength="5" maxlength="20" required
+                    placeholder="Digite seu nome" value="Gustavo">
+            </div>
+
+            <div class="form-group">
+                <label for="campo_email">E-mail</label>
+                <input type="email" id="campo_email" name="campo_email" multiple value="teste@teste.com">
+            </div>
+
+            <div class="form-group">
+                <label for="campo_password">Senha</label>
+                <input type="password" id="campo_password" name="campo_password" value="123456">
+            </div>
+
+            <div class="form-group">
+                <label for="campo_numero">Número</label>
+                <input type="number" id="campo_numero" name="campo_numero" step="0.01" value="1.5">
+            </div>
+
+            <div class="form-group">
+                <label for="campo_url">Site</label>
+                <input type="url" id="campo_url" name="campo_url" value="https://">
+            </div>
+
+            <hr>
+
+            <div class="form-group">
+                <label for="campo_date">Data de nascimento</label>
+                <input type="date" id="campo_date" name="campo_date" value="2008-02-11">
+            </div>
+
+            <div class="form-group">
+                <label for="campo_hora">Horário</label>
+                <input type="time" id="campo_hora" name="campo_hora">
+            </div>
+
+            <div class="form-group">
+                <input class="btn-enviar" type="submit" value="Enviar">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

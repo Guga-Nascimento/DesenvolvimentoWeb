@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Seletores DOM</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main class="container">
+        <header class="topo">
+            <h1 id="titulo-principal">Estudo de Seletores no DOM</h1>
+            <p class="subtitulo">
+                Esta página mostra, na prática, como funcionam
+                <code>querySelector()</code> e <code>querySelectorAll()</code>.
+            </p>
+        </header>
+
+        <section class="card explicacao">
+            <h2>O que está acontecendo aqui?</h2>
+            <p>
+                Os seletores usados no JavaScript seguem a mesma lógica dos seletores do CSS.
+                Ou seja: o JS usa a linguagem de seleção, mas quem executa a busca é o navegador via DOM.
+            </p>
+            <ul>
+                <li><strong>JavaScript:</strong> linguagem que escreve a instrução.</li>
+                <li><strong>DOM/Navegador:</strong> estrutura que contém os elementos HTML e permite buscá-los.</li>
+            </ul>
+        </section>
+
+        <section class="card area-exemplos">
+            <h2>Elementos para teste</h2>
+
+            <div class="bloco color-box">
+                <h3>Exemplo com tag</h3>
+                <p>Primeiro parágrafo da página.</p>
+                <p name="texto" class="texto letra">Segundo parágrafo com classe e atributo.</p>
+            </div>
+
+            <div class="bloco color-card">
+                <h3 id="texto">Exemplo com ID</h3>
+                <p class="texto">Parágrafo com classe <code>.texto</code>.</p>
+                <span class="text-small">Span com class contendo "text".</span>
+            </div>
+
+            <div class="bloco color-size">
+                <h3>Exemplo com lista</h3>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card painel">
+            <h2>Resultado dos seletores</h2>
+            <button id="btn-analisar">Analisar seletores</button>
+            <div id="resultado" class="resultado">
+                Clique no botão para ver os resultados na tela.
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

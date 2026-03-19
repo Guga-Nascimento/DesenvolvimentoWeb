@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Estilo Inline com JavaScript</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="topo">
+            <h1>Estilo Inline com JavaScript</h1>
+            <p class="subtitulo">
+                Nesta aula, você vai ver como o JavaScript altera o visual de um elemento usando DOM.
+            </p>
+        </header>
+
+        <section class="card">
+            <h2>Texto para teste</h2>
+            <h3>Sumário</h3>
+
+            <p id="paragrafo" class="texto-destaque">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, animi.
+            </p>
+
+            <div class="botoes">
+                <button id="btn-aplicar">Aplicar estilo inline</button>
+                <button id="btn-resetar">Voltar ao original</button>
+            </div>
+        </section>
+
+        <section class="card explicacao">
+            <h2>O que estudar aqui</h2>
+            <ul>
+                <li><strong>CSS:</strong> define estilos da página.</li>
+                <li><strong>JavaScript:</strong> envia comandos para alterar o elemento.</li>
+                <li><strong>DOM:</strong> é a estrutura da página que o navegador entrega ao JavaScript.</li>
+            </ul>
+        </section>
+
+        <section class="card painel">
+            <h2>Leitura do código na prática</h2>
+            <div id="saida" class="saida">
+                Clique em um botão para ver o resultado e a explicação.
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

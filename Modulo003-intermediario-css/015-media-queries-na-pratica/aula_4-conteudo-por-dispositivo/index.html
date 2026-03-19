@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Faz a responsividade funcionar corretamente nos dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conteúdo para cada dispositivo</title>
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo geral da página */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #222;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 24px;
+        }
+
+        header h3 {
+            font-size: 1.5rem;
+        }
+
+        /* Área principal */
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Estilo base dos artigos */
+        article {
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Cores diferentes para facilitar a visualização */
+        .visivel-mobile {
+            display: block;
+            background-color: #dbeafe;
+            border: 2px solid #60a5fa;
+        }
+
+        .visivel-tablet {
+            display: none;
+            background-color: #fef3c7;
+            border: 2px solid #f59e0b;
+        }
+
+        .visivel-desktop {
+            display: none;
+            background-color: #dcfce7;
+            border: 2px solid #22c55e;
+        }
+
+        /*
+            A partir de 576px:
+            - esconde mobile
+            - mostra tablet
+            - mantém desktop escondido
+        */
+        @media (min-width: 576px) {
+            .visivel-mobile {
+                display: none;
+            }
+
+            .visivel-tablet {
+                display: block;
+            }
+
+            .visivel-desktop {
+                display: none;
+            }
+        }
+
+        /*
+            A partir de 992px:
+            - esconde mobile
+            - esconde tablet
+            - mostra desktop
+        */
+        @media (min-width: 992px) {
+            .visivel-mobile {
+                display: none;
+            }
+
+            .visivel-tablet {
+                display: none;
+            }
+
+            .visivel-desktop {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h3>Conteúdo diferente para cada dispositivo</h3>
+    </header>
+
+    <section>
+        <article class="visivel-mobile">
+            <h1>Apenas em mobile</h1>
+            <p>Este conteúdo aparece somente em telas pequenas.</p>
+        </article>
+
+        <article class="visivel-tablet">
+            <h1>Apenas em tablet</h1>
+            <p>Este conteúdo aparece somente em telas médias.</p>
+        </article>
+
+        <article class="visivel-desktop">
+            <h1>Apenas em desktop</h1>
+            <p>Este conteúdo aparece somente em telas grandes.</p>
+        </article>
+    </section>
+
+</body>
+</html>

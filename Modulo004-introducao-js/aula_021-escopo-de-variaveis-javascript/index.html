@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de Variáveis em JavaScript</title>
+
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <header class="topo">
+            <h1>Escopo de Variáveis em JavaScript</h1>
+            <p>
+                Aqui você vai estudar escopo global, escopo local, escopo de bloco
+                e a diferença entre <strong>var</strong>, <strong>let</strong> e <strong>const</strong>.
+            </p>
+        </header>
+
+        <section class="bloco">
+            <h2>Escolha um exemplo</h2>
+
+            <div class="botoes">
+                <button id="btn-global">Escopo global</button>
+                <button id="btn-local">Escopo local</button>
+                <button id="btn-sombra">Sombra de variável</button>
+                <button id="btn-bloco">Escopo de bloco</button>
+                <button id="btn-var-let">var x let</button>
+                <button id="btn-limpar">Limpar tela</button>
+            </div>
+        </section>
+
+        <section class="bloco">
+            <h2>Resultado no navegador</h2>
+            <div id="resultado" class="resultado">
+                Clique em um botão para ver o exemplo.
+            </div>
+        </section>
+
+        <section class="bloco">
+            <h2>Explicação na tela</h2>
+
+            <div class="painel">
+                <article class="card">
+                    <h3>Conceito</h3>
+                    <p id="info-conceito">Nenhum item selecionado.</p>
+                </article>
+
+                <article class="card">
+                    <h3>O que acontece</h3>
+                    <p id="info-funcao">Nenhum item selecionado.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Leitura humana</h3>
+                    <p id="info-leitura">Nenhum item selecionado.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Observação</h3>
+                    <p id="info-observacao">Nenhum item selecionado.</p>
+                </article>
+            </div>
+
+            <div class="codigo-bloco">
+                <h3>Exemplo de código</h3>
+                <pre id="info-codigo" class="codigo">Clique em um botão para visualizar o código do exemplo.</pre>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

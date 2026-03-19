@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query para Impressão</title>
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo normal da página, visível na tela */
+        body {
+            padding: 20px;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: lightblue;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: orange;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: lightgreen;
+            line-height: 1.6;
+        }
+
+        /* 
+            Essa media query só será aplicada na impressão.
+            Ou seja: quando a página for impressa,
+            essas regras substituem o estilo da tela.
+        */
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            h1, h3, p {
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Título da nossa página</h1>
+
+    <h3>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quibusdam.
+    </h3>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quia modi cumque laudantium,
+        consectetur impedit provident quaerat optio tempore vero, eveniet nesciunt quasi alias temporibus
+        ea explicabo id dicta laboriosam. Blanditiis dolores consequatur sed facilis dolorum, quasi eos
+        perspiciatis? Qui ea esse officiis minus, quaerat veniam totam. Non cumque eos totam quibusdam
+        quisquam, mollitia obcaecati libero molestiae ipsa placeat illo. Quod ad amet dolorum cumque quos.
+        Sunt nesciunt illum veritatis quas, tempora non esse labore ex quam minima quasi. Aspernatur alias
+        commodi laudantium tempora possimus, earum ipsam sunt vel culpa! Voluptatibus, ducimus maiores?
+        Nulla fugit aliquid expedita magni saepe totam vitae odit, animi dignissimos dolore eligendi quo ut
+        necessitatibus consequuntur quam debitis sit aperiam magnam dolorem delectus error. Quisquam, nesciunt.
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Fieldset</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h3>Formulário</h3>
+
+        <form action="https://sys4soft.com/udemy/forms/index.php" method="post">
+
+            <!--
+                fieldset agrupa campos relacionados
+                legend é o título desse grupo
+            -->
+            <fieldset>
+                <legend>Dados pessoais</legend>
+
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="apelido">Apelido</label>
+                    <input type="text" name="apelido" id="apelido" placeholder="Digite seu apelido">
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <input type="submit" value="Enviar">
+            </div>
+
+        </form>
+
+        <div class="info-box">
+            <h4>O que estamos fazendo aqui?</h4>
+            <p>
+                Estamos usando <strong>fieldset</strong> para agrupar campos do formulário
+                que pertencem ao mesmo assunto.
+            </p>
+            <p>
+                A tag <strong>legend</strong> funciona como o título desse grupo.
+            </p>
+            <p>
+                No navegador, você verá uma área destacada com o título
+                <strong>Dados pessoais</strong>, contendo os campos Nome e Apelido.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
