@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #e8f0ff, #f8fbff);
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.formulario {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+.descricao {
+    margin-bottom: 20px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #374151;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input.erro-input {
+    border: 2px solid #dc2626;
+    background-color: #fef2f2;
+}
+
+input.sucesso-input {
+    border: 2px solid #16a34a;
+    background-color: #f0fdf4;
+}
+
+.botao {
+    border: none;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.error {
+    display: block;
+    margin-top: 6px;
+    color: #dc2626;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.mensagem-geral {
+    margin-top: 16px;
+    min-height: 24px;
+    font-weight: bold;
+}
+
+.mensagem-geral.erro-geral {
+    color: #b91c1c;
+}
+
+.mensagem-geral.sucesso-geral {
+    color: #15803d;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Carregamento do DOM</title>
+
+    <!-- Teste 2: descomente para testar script no HEAD com defer -->
+    <!-- <script src="script.js" defer></script> -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Texto original</h1>
+
+        <button id="btn1">Usar DOMContentLoaded</button>
+        <button id="btn2">Usar readystatechange</button>
+        <button id="btn3">Script no final do body</button>
+
+        <p id="status">Aguardando interação...</p>
+    </main>
+
+    <!-- Teste 1: script no final do body -->
+    <script src="script.js"></script>
+</body>
+</html>

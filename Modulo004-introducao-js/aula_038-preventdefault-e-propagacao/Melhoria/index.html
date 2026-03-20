@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PreventDefault e Propagação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="painel">
+      <h1>Estudo de preventDefault e propagação</h1>
+      <p class="explicacao">
+        Clique no link e tente enviar o formulário. A página vai mostrar o que está acontecendo.
+      </p>
+
+      <a class="link-estudo" href="https://www.google.com" target="_blank">
+        Ir para o Google
+      </a>
+
+      <div class="caixa">
+        <form class="formulario" action="#" method="post">
+          <div class="campo">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" placeholder="Digite seu usuário">
+          </div>
+
+          <div class="campo">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+          </div>
+
+          <div class="acoes">
+            <input type="submit" value="Entrar">
+          </div>
+        </form>
+      </div>
+
+      <section class="resultado">
+        <h2>Saída do estudo</h2>
+        <p id="mensagem">
+          Aguardando interação...
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
