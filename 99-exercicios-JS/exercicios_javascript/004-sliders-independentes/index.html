@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Sliders Interativos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="topo">
+            <h1>Painel de Sliders Interativos</h1>
+            <p>
+                Exercício evoluído de DOM com sliders independentes, feedback visual
+                e resumo automático dos valores.
+            </p>
+        </header>
+
+        <section class="acoes">
+            <button id="btnReset" class="botao botao-secundario">Resetar</button>
+            <button id="btnSortear" class="botao botao-principal">Sortear valores</button>
+        </section>
+
+        <section class="resumo">
+            <div class="resumo-card">
+                <span class="resumo-titulo">Média geral</span>
+                <strong id="mediaGeral">0</strong>
+            </div>
+
+            <div class="resumo-card">
+                <span class="resumo-titulo">Maior valor</span>
+                <strong id="maiorValor">0</strong>
+            </div>
+
+            <div class="resumo-card">
+                <span class="resumo-titulo">Menor valor</span>
+                <strong id="menorValor">0</strong>
+            </div>
+        </section>
+
+        <section class="painel-sliders">
+
+            <article class="slider-card">
+                <div class="slider-topo">
+                    <div>
+                        <h2>Slider 1</h2>
+                        <p>Controle individual do primeiro valor</p>
+                    </div>
+                    <div class="valor-box">
+                        <span id="value_1">0</span>
+                    </div>
+                </div>
+
+                <input type="range" id="range_1" class="slider">
+
+                <div class="slider-info">
+                    <span id="status_1">Baixo</span>
+                    <span id="percentual_1">0%</span>
+                </div>
+            </article>
+
+            <article class="slider-card">
+                <div class="slider-topo">
+                    <div>
+                        <h2>Slider 2</h2>
+                        <p>Controle individual do segundo valor</p>
+                    </div>
+                    <div class="valor-box">
+                        <span id="value_2">0</span>
+                    </div>
+                </div>
+
+                <input type="range" id="range_2" class="slider">
+
+                <div class="slider-info">
+                    <span id="status_2">Baixo</span>
+                    <span id="percentual_2">0%</span>
+                </div>
+            </article>
+
+            <article class="slider-card">
+                <div class="slider-topo">
+                    <div>
+                        <h2>Slider 3</h2>
+                        <p>Controle individual do terceiro valor</p>
+                    </div>
+                    <div class="valor-box">
+                        <span id="value_3">0</span>
+                    </div>
+                </div>
+
+                <input type="range" id="range_3" class="slider">
+
+                <div class="slider-info">
+                    <span id="status_3">Baixo</span>
+                    <span id="percentual_3">0%</span>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="explicacao">
+            <h3>O que este exercício ensina</h3>
+            <ul>
+                <li>Como selecionar elementos com <code>querySelector</code></li>
+                <li>Como ouvir eventos com <code>addEventListener</code></li>
+                <li>Como atualizar texto na tela com <code>textContent</code></li>
+                <li>Como reaproveitar código com funções</li>
+                <li>Como calcular média, maior e menor valor</li>
+                <li>Como refletir o estado do JavaScript visualmente no navegador</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
