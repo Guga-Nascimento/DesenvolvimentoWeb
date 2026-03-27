@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abas Interativas Modernas</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="hero">
+            <p class="tag">Exercício 006 evoluído</p>
+            <h1>Abas interativas com JavaScript</h1>
+            <p class="hero-text">
+                Este projeto mostra como trocar áreas inteiras de conteúdo sem recarregar a página,
+                usando DOM, eventos e manipulação de classes.
+            </p>
+        </header>
+
+        <section class="painel-controle">
+            <div class="painel-topo">
+                <div>
+                    <span class="painel-label">Aba ativa</span>
+                    <strong id="abaAtual">Informação 1</strong>
+                </div>
+
+                <div>
+                    <span class="painel-label">Posição</span>
+                    <strong id="contadorAbas">1 de 3</strong>
+                </div>
+            </div>
+
+            <div class="tabs" id="tabsContainer">
+                <button id="tab1" class="tab-btn active" data-tab="1">Informação 1</button>
+                <button id="tab2" class="tab-btn" data-tab="2">Informação 2</button>
+                <button id="tab3" class="tab-btn" data-tab="3">Informação 3</button>
+            </div>
+
+            <div class="acoes">
+                <button id="btnAnterior" class="nav-btn">← Anterior</button>
+                <button id="btnProxima" class="nav-btn destaque">Próxima →</button>
+            </div>
+        </section>
+
+        <section class="conteudo">
+            <article id="info1" class="caixa-informacao active">
+                <span class="icone">🧡</span>
+                <h2>Atendimento rápido</h2>
+                <p>
+                    Essa área pode representar um bloco de apresentação de serviço. Em um site real,
+                    o usuário poderia clicar em diferentes abas para entender os diferenciais da empresa.
+                </p>
+                <ul>
+                    <li>Troca imediata de conteúdo</li>
+                    <li>Melhor aproveitamento do espaço da tela</li>
+                    <li>Experiência mais dinâmica</li>
+                </ul>
+            </article>
+
+            <article id="info2" class="caixa-informacao">
+                <span class="icone">💙</span>
+                <h2>Organização de informações</h2>
+                <p>
+                    Esse padrão é muito útil quando você precisa mostrar vários grupos de dados
+                    sem deixar a interface poluída. É comum em dashboards, cursos e páginas de produto.
+                </p>
+                <ul>
+                    <li>Separa assuntos por contexto</li>
+                    <li>Evita rolagem excessiva</li>
+                    <li>Facilita manutenção da interface</li>
+                </ul>
+            </article>
+
+            <article id="info3" class="caixa-informacao">
+                <span class="icone">✨</span>
+                <h2>Interação moderna</h2>
+                <p>
+                    Nesta versão, além da troca de conteúdo, você também tem estado ativo, navegação
+                    por botões, atualização de painel e suporte às teclas de seta.
+                </p>
+                <ul>
+                    <li>Visual moderno e limpo</li>
+                    <li>Mais feedback para o usuário</li>
+                    <li>Código pronto para crescer</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="explicacao">
+            <h3>O que este exercício ensina</h3>
+            <div class="explicacao-grid">
+                <div class="exp-card">
+                    <h4>JavaScript</h4>
+                    <p>Controle de estado, funções, arrays, eventos, atualização de interface e reaproveitamento de código.</p>
+                </div>
+
+                <div class="exp-card">
+                    <h4>DOM</h4>
+                    <p>Seleção de elementos, troca de classes, leitura de atributos, atualização de texto e resposta ao clique.</p>
+                </div>
+
+                <div class="exp-card">
+                    <h4>UI</h4>
+                    <p>Abas modernas, animação suave, feedback visual de aba ativa e navegação mais amigável.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
