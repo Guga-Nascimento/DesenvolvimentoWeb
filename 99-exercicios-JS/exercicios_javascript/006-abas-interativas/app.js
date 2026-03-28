@@ -20,9 +20,9 @@ function show_tab(id){
 }
 
 document.querySelectorAll('[id^="tab"]').forEach((btn) => {
-    btn.addEventListener('click', (btn)=> {
+    btn.addEventListener('click', (event)=> {
         hide_all();
-        show_tab(btn.target.id.substring(3))
+        show_tab(event.target.id.substring(3))
     })
 })
 
