@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript DOM - Exercício 008</title>
+    <title>JavaScript DOM - Exercício 009</title>
     <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/png">
+
     <!-- bootstrap -->
     <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
 </head>
-<body>
-    
+<body class="bg-dark text-white">
+
     <div class="container mt-5">
         <div class="row">
             <div class="col text-center">
-                <h3>Este texto vai mudar de cor!</h3>
+                <h3 id="texto">Este texto vai mudar de transparência!</h3>
+                <p class="mt-3">Arraste o controle para alterar a opacidade do texto.</p>
             </div>
         </div>
+
         <div class="row mt-5">
             <div class="col text-center">
-                <input type="range" id="range" class="form-range">
+                <input 
+                    type="range" 
+                    id="range" 
+                    class="form-range"
+                    min="0"
+                    max="100"
+                    value="100"
+                >
             </div>
         </div>
     </div>
