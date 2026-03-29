@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 010 | Áreas Interativas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="pagina">
+    <section class="painel">
+      <header class="cabecalho">
+        <p class="etiqueta">Exercício 010</p>
+        <h1>Seleção de áreas com destaque visual</h1>
+        <p class="descricao">
+          Clique em uma das caixas. A caixa clicada ficará amarela e as demais ficarão vermelhas.
+          Este exercício treina seleção de elementos, eventos de clique, laços e manipulação de classes no DOM.
+        </p>
+      </header>
+
+      <section class="status" aria-live="polite">
+        <h2 class="status-titulo">Status da interação</h2>
+        <p id="mensagem" class="mensagem">
+          Nenhuma caixa foi selecionada ainda.
+        </p>
+      </section>
+
+      <section class="grade" aria-label="Caixas interativas">
+        <div class="box" id="box1" data-nome="Caixa 1" tabindex="0">
+          <span>Caixa 1</span>
+        </div>
+
+        <div class="box" id="box2" data-nome="Caixa 2" tabindex="0">
+          <span>Caixa 2</span>
+        </div>
+
+        <div class="box" id="box3" data-nome="Caixa 3" tabindex="0">
+          <span>Caixa 3</span>
+        </div>
+
+        <div class="box" id="box4" data-nome="Caixa 4" tabindex="0">
+          <span>Caixa 4</span>
+        </div>
+      </section>
+
+      <section class="explicacao">
+        <h2>O que este exercício ensina</h2>
+        <ul>
+          <li>Como selecionar vários elementos de uma vez com <code>querySelectorAll</code></li>
+          <li>Como percorrer elementos com <code>forEach</code></li>
+          <li>Como reagir ao clique com <code>addEventListener</code></li>
+          <li>Como trocar classes CSS com <code>classList</code></li>
+          <li>Como exibir feedback visual e textual na própria tela</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
