@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col">
+
+                <!-- elemento principal do accordion (elemento pai) -->
+                <div class="accordion" id="accordionExample">
+
+                    <!-- item de um accordion -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="titulo_1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#area_1" aria-expanded="true" aria-controls="titulo_1">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="area_1" class="accordion-collapse collapse" aria-labelledby="titulo_1"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, impedit? Mollitia
+                                commodi, magnam modi reiciendis in maiores natus repellat quos.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- item de um accordion -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="titulo_2">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#area_2" aria-expanded="true" aria-controls="area_2">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="area_2" class="accordion-collapse collapse" aria-labelledby="titulo_2"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, impedit? Mollitia
+                                commodi, magnam modi reiciendis in maiores natus repellat quos.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- item de um accordion -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="titulo_3">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#area_3" aria-expanded="true" aria-controls="area_3">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="area_3" class="accordion-collapse collapse" aria-labelledby="titulo_3"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam dolore, debitis libero omnis optio quod magni nulla, asperiores vero nihil. Quae numquam ut pariatur dolores ad enim cupiditate consequuntur delectus dicta, laudantium officiis rem velit exercitationem deserunt, dolorem sapiente in, beatae ducimus. Soluta praesentium eum esse itaque at quaerat.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
