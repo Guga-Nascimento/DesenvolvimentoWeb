@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 2 - Colunas Responsivas</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+    crossorigin="anonymous">
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <!-- Título principal da aula -->
+        <h1 class="text-center mb-4">
+            Aula 2 - Colunas Responsivas
+        </h1>
+
+        <!-- Introdução da aula -->
+        <p class="text-center mb-5">
+            Nesta aula, estamos estudando como as colunas do Bootstrap mudam de tamanho
+            conforme a largura da tela.
+        </p>
+
+        <!-- 
+            row = linha do Bootstrap
+            text-center = centraliza o texto dentro das colunas
+            g-3 = cria espaçamento entre as colunas
+            mb-4 = cria margem embaixo da linha
+        -->
+        <div class="row text-center g-3 mb-4">
+
+            <!-- 
+                col-12 = em telas pequenas, ocupa 12 colunas, ou seja, 100% da linha
+                col-sm-6 = a partir de 576px, ocupa 6 colunas, ou seja, metade da linha
+                col-md-3 = a partir de 768px, ocupa 3 colunas, ou seja, 1/4 da linha
+            -->
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="border bg-light p-3">
+                    A
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="border bg-light p-3">
+                    B
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="border bg-light p-3">
+                    C
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="border bg-light p-3">
+                    D
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bloco de explicação -->
+        <div class="border rounded bg-light p-4 mb-4">
+
+            <h2 class="h4 mb-3">
+                Explicação dos Breakpoints
+            </h2>
+
+            <p>
+                O Bootstrap trabalha com um sistema de grid baseado em <strong>12 colunas</strong>.
+                As classes responsivas permitem controlar quantas colunas cada elemento ocupa
+                de acordo com o tamanho da tela.
+            </p>
+
+            <p>
+                No exemplo desta aula, usamos:
+            </p>
+
+            <pre class="bg-white border rounded p-3"><code>col-12 col-sm-6 col-md-3</code></pre>
+
+            <p>
+                Isso significa que o mesmo bloco terá comportamentos diferentes dependendo
+                da largura da tela.
+            </p>
+
+            <!-- Tabela explicando os breakpoints usados na aula -->
+            <table class="table table-bordered table-striped mt-4">
+                <thead>
+                    <tr>
+                        <th>Classe</th>
+                        <th>Largura da tela</th>
+                        <th>Comportamento</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><strong>col-12</strong></td>
+                        <td>até 575px</td>
+                        <td>Cada coluna ocupa 100% da linha</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>col-sm-6</strong></td>
+                        <td>a partir de 576px</td>
+                        <td>Cada coluna ocupa metade da linha</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>col-md-3</strong></td>
+                        <td>a partir de 768px</td>
+                        <td>Cada coluna ocupa 1/4 da linha</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="h5 mt-4">
+                Como testar no navegador
+            </h3>
+
+            <p>
+                Para testar a responsividade, abra a página no navegador e pressione
+                <strong>F12</strong>.
+            </p>
+
+            <p>
+                Depois, clique no ícone de celular/tablet no DevTools. Esse botão ativa
+                o modo de visualização responsiva.
+            </p>
+
+            <p>
+                No topo da tela, altere manualmente a largura e teste os seguintes valores:
+            </p>
+
+            <ul>
+                <li><strong>575px</strong>: as colunas ficam uma abaixo da outra.</li>
+                <li><strong>576px</strong>: as colunas passam a ficar duas por linha.</li>
+                <li><strong>767px</strong>: continuam duas por linha.</li>
+                <li><strong>768px</strong>: passam a ficar quatro por linha.</li>
+            </ul>
+
+        </div>
+
+        <!-- Navegação entre aulas -->
+        <div class="d-flex justify-content-between mb-5">
+
+            <a href="index.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula3.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+    crossorigin="anonymous"></script>
+
+</body>
+</html>

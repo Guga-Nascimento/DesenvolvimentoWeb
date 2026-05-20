@@ -12,3 +12,32 @@ div[class^="row"]{
     box-shadow: inset 0 0 1px red;
     background-color: bisque;
 }
+/* 
+    Define uma altura mínima para os blocos coloridos.
+    Isso deixa as colunas visualmente mais equilibradas.
+*/
+.coluna-verde,
+.coluna-roxa,
+.coluna-laranja {
+    min-height: 180px;
+
+    /* Organiza o conteúdo no centro do bloco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Coluna A - verde */
+.coluna-verde {
+    background-color: #198754;
+}
+
+/* Coluna B - roxo */
+.coluna-roxa {
+    background-color: #6f42c1;
+}
+
+/* Coluna C - laranja */
+.coluna-laranja {
+    background-color: #fd7e14;
+}

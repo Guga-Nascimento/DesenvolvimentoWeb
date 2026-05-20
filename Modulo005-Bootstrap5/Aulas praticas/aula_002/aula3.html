@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Garante que o layout responda corretamente em celulares, tablets e desktops -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 3 - Exercício Prático Responsivo</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 
+        main representa o conteúdo principal da página.
+        Isso ajuda na acessibilidade e na organização semântica do HTML.
+    -->
+    <main class="container mt-5 mb-5">
+
+        <!-- Cabeçalho da página -->
+        <header class="text-center mb-5">
+            <h1>Aula 3 - Exercício Prático Responsivo</h1>
+
+            <p class="lead">
+                Neste exercício, as colunas mudam de tamanho conforme o dispositivo usado.
+            </p>
+        </header>
+
+        <!-- 
+            section agrupa o conteúdo principal do exercício.
+            aria-labelledby liga a seção ao título, melhorando a acessibilidade.
+        -->
+        <section aria-labelledby="titulo-exercicio">
+
+            <h2 id="titulo-exercicio" class="h4 mb-4">
+                Resultado do exercício
+            </h2>
+
+            <!-- 
+                row cria uma linha no sistema de grid do Bootstrap.
+                g-3 adiciona espaçamento entre as colunas.
+                text-center centraliza o texto dentro das colunas.
+            -->
+            <div class="row g-3 text-center">
+
+                <!-- 
+                    Smartphone:
+                    col-12 = ocupa 12 unidades, ou seja, 100% da linha.
+
+                    Tablet:
+                    col-md-3 = a partir de 768px, ocupa 3 unidades.
+
+                    Desktop:
+                    col-lg-4 = a partir de 992px, ocupa 4 unidades.
+                -->
+                <div class="col-12 col-md-3 col-lg-4">
+                    <div class="p-4 rounded text-white coluna-verde h-100" role="region" aria-label="Coluna A verde">
+                        <h3 class="h5">Coluna A</h3>
+                        <p class="mb-0">
+                            Smartphone: 12 unidades<br>
+                            Tablet: 3 unidades<br>
+                            Desktop: 4 unidades
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 col-lg-4">
+                    <div class="p-4 rounded text-white coluna-roxa h-100" role="region" aria-label="Coluna B roxa">
+                        <h3 class="h5">Coluna B</h3>
+                        <p class="mb-0">
+                            Smartphone: 12 unidades<br>
+                            Tablet: 3 unidades<br>
+                            Desktop: 4 unidades
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="p-4 rounded text-dark coluna-laranja h-100" role="region" aria-label="Coluna C laranja">
+                        <h3 class="h5">Coluna C</h3>
+                        <p class="mb-0">
+                            Smartphone: 12 unidades<br>
+                            Tablet: 6 unidades<br>
+                            Desktop: 4 unidades
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Bloco explicativo -->
+        <section class="border rounded bg-light p-4 mt-5" aria-labelledby="titulo-explicacao">
+
+            <h2 id="titulo-explicacao" class="h4 mb-3">
+                Explicação
+            </h2>
+
+            <p>
+                O Bootstrap trabalha com um sistema de <strong>12 colunas</strong>.
+                Neste exercício, cada dispositivo recebe uma configuração diferente.
+            </p>
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Dispositivo</th>
+                        <th>Coluna A</th>
+                        <th>Coluna B</th>
+                        <th>Coluna C</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Smartphone</td>
+                        <td>12 unidades</td>
+                        <td>12 unidades</td>
+                        <td>12 unidades</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tablet</td>
+                        <td>3 unidades</td>
+                        <td>3 unidades</td>
+                        <td>6 unidades</td>
+                    </tr>
+
+                    <tr>
+                        <td>Desktop</td>
+                        <td>4 unidades</td>
+                        <td>4 unidades</td>
+                        <td>4 unidades</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mb-0">
+                A classe <strong>col-12</strong> vale para telas menores.
+                A classe <strong>col-md</strong> começa a valer a partir de 768px.
+                A classe <strong>col-lg</strong> começa a valer a partir de 992px.
+            </p>
+
+        </section>
+
+        <!-- Navegação entre aulas -->
+        <nav class="d-flex justify-content-between mt-5" aria-label="Navegação entre aulas">
+
+            <a href="aula2.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula4.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+
+        </nav>
+
+    </main>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
