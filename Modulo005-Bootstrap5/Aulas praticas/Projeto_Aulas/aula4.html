@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mantém compatibilidade com versões antigas do Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 4 - Alinhamento de Rows dentro de Cols</title>
+
+    <!-- CSS do Bootstrap -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+        crossorigin="anonymous"
+    >
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- 
+        main representa o conteúdo principal da página.
+        container centraliza o conteúdo e limita a largura máxima.
+        mt-5 adiciona margem no topo.
+        mb-5 adiciona margem no final.
+    -->
+    <main class="container mt-5 mb-5">
+
+        <!-- Cabeçalho da aula -->
+        <section class="text-center mb-5" aria-labelledby="titulo-aula">
+            <h1 id="titulo-aula" class="mb-4">
+                Aula 4 - Alinhamento de Rows dentro de Cols
+            </h1>
+
+            <p class="lead">
+                Nesta aula, vamos aprender como criar uma <strong>row</strong> dentro de uma
+                <strong>col</strong>, formando um grid aninhado no Bootstrap.
+            </p>
+        </section>
+
+        <!-- Explicação teórica -->
+        <section class="mb-5" aria-labelledby="explicacao-aula">
+            <h2 id="explicacao-aula" class="h4 mb-3">
+                O que esta aula ensina?
+            </h2>
+
+            <p>
+                No Bootstrap, a estrutura básica do grid é:
+                <code>container → row → col</code>.
+            </p>
+
+            <p>
+                Porém, em alguns layouts, precisamos dividir uma coluna em novas partes.
+                Para isso, colocamos uma nova <code>row</code> dentro de uma <code>col</code>.
+            </p>
+
+            <p>
+                Esse recurso é chamado de <strong>grid aninhado</strong> e aparece bastante
+                em layouts profissionais, como cards, dashboards, áreas de serviços e páginas
+                de portfólio.
+            </p>
+        </section>
+
+        <!-- Exercício prático -->
+        <section class="mb-5" aria-labelledby="exercicio-pratico">
+            <h2 id="exercicio-pratico" class="h4 mb-4">
+                Exercício prático
+            </h2>
+
+            <!-- 
+                row principal:
+                cria a primeira linha do layout.
+                g-3 adiciona espaçamento entre as colunas.
+            -->
+            <div class="row g-3">
+
+                <!-- 
+                    Coluna A:
+                    col-12: no celular ocupa 100% da linha.
+                    col-sm-6: a partir de 576px ocupa metade da linha.
+                -->
+                <div class="col-12 col-sm-6">
+                    <div class="p-4 border rounded bg-success text-white h-100 text-center">
+                        <h3 class="mb-0">A</h3>
+                    </div>
+                </div>
+
+                <!-- 
+                    Segunda coluna principal:
+                    também ocupa 100% no celular e metade da linha a partir de sm.
+                    Dentro dela será criada uma nova row.
+                -->
+                <div class="col-12 col-sm-6">
+
+                    <!-- 
+                        row interna:
+                        esta row está dentro de uma col.
+                        Ela permite dividir o espaço interno em novas colunas.
+                    -->
+                    <div class="row g-3">
+
+                        <!-- 
+                            Coluna B:
+                            col-12: ocupa 100% no celular e também antes do lg.
+                            col-lg-6: a partir de 992px ocupa metade da row interna.
+                        -->
+                        <div class="col-12 col-lg-6">
+                            <div class="p-4 border rounded bg-primary text-white h-100 text-center">
+                                <h3 class="mb-0">B</h3>
+                            </div>
+                        </div>
+
+                        <!-- 
+                            Coluna C:
+                            segue a mesma lógica da coluna B.
+                        -->
+                        <div class="col-12 col-lg-6">
+                            <div class="p-4 border rounded bg-warning text-dark h-100 text-center">
+                                <h3 class="mb-0">C</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Explicação do comportamento responsivo -->
+        <section class="mb-5" aria-labelledby="comportamento-responsivo">
+            <h2 id="comportamento-responsivo" class="h4 mb-3">
+                Como o layout se comporta?
+            </h2>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    No celular, <code>A</code>, <code>B</code> e <code>C</code> ficam um abaixo do outro.
+                </li>
+
+                <li class="list-group-item">
+                    A partir de <code>sm</code>, ou seja, 576px, a coluna <code>A</code> ocupa metade da tela.
+                </li>
+
+                <li class="list-group-item">
+                    A outra metade da tela fica com uma segunda coluna, que contém <code>B</code> e <code>C</code>.
+                </li>
+
+                <li class="list-group-item">
+                    A partir de <code>lg</code>, ou seja, 992px, <code>B</code> e <code>C</code> ficam lado a lado dentro da coluna principal.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Resumo da aula -->
+        <section class="mb-5" aria-labelledby="resumo-aula">
+            <h2 id="resumo-aula" class="h4 mb-3">
+                Resumo das classes usadas
+            </h2>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <code>container</code>: centraliza o conteúdo e define uma largura máxima responsiva.
+                </li>
+
+                <li class="list-group-item">
+                    <code>row</code>: cria uma linha dentro do sistema de grid.
+                </li>
+
+                <li class="list-group-item">
+                    <code>col-12</code>: faz a coluna ocupar toda a largura disponível.
+                </li>
+
+                <li class="list-group-item">
+                    <code>col-sm-6</code>: a partir de 576px, faz a coluna ocupar metade da linha.
+                </li>
+
+                <li class="list-group-item">
+                    <code>col-lg-6</code>: a partir de 992px, faz a coluna ocupar metade da row interna.
+                </li>
+
+                <li class="list-group-item">
+                    <code>g-3</code>: adiciona espaçamento entre as colunas.
+                </li>
+
+                <li class="list-group-item">
+                    <code>p-4</code>: adiciona espaçamento interno.
+                </li>
+
+                <li class="list-group-item">
+                    <code>border</code>: adiciona borda ao elemento.
+                </li>
+
+                <li class="list-group-item">
+                    <code>rounded</code>: arredonda os cantos.
+                </li>
+
+                <li class="list-group-item">
+                    <code>h-100</code>: faz o bloco ocupar toda a altura disponível.
+                </li>
+
+                <li class="list-group-item">
+                    <code>text-center</code>: centraliza o texto.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Navegação entre aulas -->
+        <nav class="d-flex justify-content-between mb-5" aria-label="Navegação entre aulas">
+
+            <a href="aula3.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula5.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+
+        </nav>
+
+    </main>
+
+    <!-- JavaScript do Bootstrap -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+        crossorigin="anonymous">
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 7 - Ordem e Alinhamento Individual de Columns</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+    crossorigin="anonymous">
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h1 class="text-center mb-4">
+            Aula 7 - Ordem e Alinhamento Individual de Columns
+        </h1>
+
+        <p class="text-center mb-5">
+            Nesta aula, vamos aprender como alterar a ordem visual das colunas e como definir
+            o alinhamento vertical de cada coluna individualmente.
+        </p>
+
+        <!-- 
+            PARTE 1: Alterando a ordem das colunas
+
+            As classes order-* alteram a ordem visual dos elementos.
+            Importante: a ordem no HTML continua a mesma, mas a ordem exibida na tela muda.
+        -->
+        <h2 class="mb-3">1. Alterando a ordem das columns</h2>
+
+        <p>
+            No exemplo abaixo, o HTML está na ordem 1, 2 e 3.
+            Porém, usando <code>order-3</code>, <code>order-2</code> e <code>order-1</code>,
+            a ordem visual será alterada.
+        </p>
+
+        <div class="row mb-5">
+            <div class="col order-3">
+                <div class="p-3 bg-primary text-white text-center border rounded">
+                    <h3>1</h3>
+                </div>
+            </div>
+
+            <div class="col order-2">
+                <div class="p-3 bg-success text-white text-center border rounded">
+                    <h3>2</h3>
+                </div>
+            </div>
+
+            <div class="col order-1">
+                <div class="p-3 bg-warning text-dark text-center border rounded">
+                    <h3>3</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            PARTE 2: Alinhamento vertical individual
+
+            As classes align-self-* são aplicadas diretamente na coluna.
+            Elas permitem alinhar uma coluna específica de forma diferente das outras.
+        -->
+        <h2 class="mb-3">
+            2. Alinhamento vertical individual das columns
+        </h2>
+
+        <p>
+            Agora vamos usar <code>align-self-start</code>, <code>align-self-center</code>
+            e <code>align-self-end</code> para alinhar cada coluna individualmente.
+        </p>
+
+        <!-- 
+            A altura mínima ajuda a visualizar melhor o alinhamento vertical.
+            Sem altura, o efeito pode parecer que não funcionou.
+        -->
+        <div class="row mb-5 border rounded p-3" style="min-height: 250px;">
+
+            <div class="col">
+                <div class="p-3 bg-light border rounded">
+                    <h3>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </h3>
+                </div>
+            </div>
+
+            <div class="col align-self-start">
+                <div class="p-3 bg-primary text-white text-center border rounded">
+                    <h3>A</h3>
+                    <p class="mb-0">start</p>
+                </div>
+            </div>
+
+            <div class="col align-self-center">
+                <div class="p-3 bg-success text-white text-center border rounded">
+                    <h3>B</h3>
+                    <p class="mb-0">center</p>
+                </div>
+            </div>
+
+            <div class="col align-self-end">
+                <div class="p-3 bg-warning text-dark text-center border rounded">
+                    <h3>C</h3>
+                    <p class="mb-0">end</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Resumo da aula -->
+        <h2 class="mb-3">Resumo da aula</h2>
+
+        <ul class="list-group mb-5">
+            <li class="list-group-item">
+                <code>order-1</code>, <code>order-2</code> e <code>order-3</code> alteram a ordem visual das colunas.
+            </li>
+
+            <li class="list-group-item">
+                A ordem no HTML continua igual, mas a exibição na tela pode mudar.
+            </li>
+
+            <li class="list-group-item">
+                <code>align-self-start</code> alinha uma coluna no topo da row.
+            </li>
+
+            <li class="list-group-item">
+                <code>align-self-center</code> alinha uma coluna no centro vertical da row.
+            </li>
+
+            <li class="list-group-item">
+                <code>align-self-end</code> alinha uma coluna na parte inferior da row.
+            </li>
+        </ul>
+
+        <!-- Navegação entre aulas -->
+        <div class="d-flex justify-content-between mb-5">
+
+            <a href="aula6.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula8.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+    crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 6 - Alinhamento Horizontal e Vertical de Columns</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+    crossorigin="anonymous">
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 
+        main representa o conteúdo principal da página.
+        container centraliza o conteúdo e limita a largura máxima.
+    -->
+    <main class="container mt-5 mb-5">
+
+        <!-- Cabeçalho da aula -->
+        <section class="text-center mb-5" aria-labelledby="titulo-aula">
+            <h1 id="titulo-aula" class="mb-4">
+                Aula 6 - Alinhamento Horizontal e Vertical de Columns
+            </h1>
+
+            <p class="lead">
+                Nesta aula, vamos estudar como alinhar colunas no Bootstrap usando
+                <strong>justify-content</strong>, <strong>align-items</strong> e
+                <strong>align-self</strong>.
+            </p>
+        </section>
+
+        <!-- Explicação inicial -->
+        <section class="mb-5" aria-labelledby="explicacao-aula">
+            <h2 id="explicacao-aula" class="h4 mb-3">
+                O que esta aula ensina?
+            </h2>
+
+            <p>
+                No Bootstrap, podemos controlar o posicionamento das colunas dentro de uma
+                <code>row</code>. Para isso, usamos classes de alinhamento horizontal e vertical.
+            </p>
+
+            <p>
+                O alinhamento horizontal é feito com <code>justify-content-*</code>.
+                O alinhamento vertical de todas as colunas é feito com <code>align-items-*</code>.
+                Já o alinhamento individual de uma coluna é feito com <code>align-self-*</code>.
+            </p>
+        </section>
+
+        <!-- Parte 1: alinhamento horizontal -->
+        <section class="mb-5" aria-labelledby="alinhamento-horizontal">
+            <h2 id="alinhamento-horizontal" class="h4 mb-4">
+                1. Alinhamento horizontal com justify-content
+            </h2>
+
+            <p>
+                As classes <code>justify-content-*</code> são aplicadas na <code>row</code>
+                e controlam como as colunas são distribuídas horizontalmente.
+            </p>
+
+            <!-- Exemplo: centralizando colunas -->
+            <h3 class="h5 mt-4 mb-3">
+                justify-content-center
+            </h3>
+
+            <!-- 
+                justify-content-center:
+                centraliza horizontalmente as colunas dentro da row.
+            -->
+            <div class="row justify-content-center g-3 mb-4 p-3 border rounded bg-white">
+                <div class="col-3">
+                    <div class="p-3 bg-primary text-white text-center rounded">
+                        A
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="p-3 bg-success text-white text-center rounded">
+                        B
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exemplo: alinhando no começo -->
+            <h3 class="h5 mt-4 mb-3">
+                justify-content-start
+            </h3>
+
+            <!-- 
+                justify-content-start:
+                alinha as colunas no início da row.
+            -->
+            <div class="row justify-content-start g-3 mb-4 p-3 border rounded bg-white">
+                <div class="col-2">
+                    <div class="p-3 bg-primary text-white text-center rounded">
+                        A
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="p-3 bg-success text-white text-center rounded">
+                        B
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="p-3 bg-warning text-dark text-center rounded">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exemplo: alinhando no final -->
+            <h3 class="h5 mt-4 mb-3">
+                justify-content-end
+            </h3>
+
+            <!-- 
+                justify-content-end:
+                alinha as colunas no final da row.
+            -->
+            <div class="row justify-content-end g-3 mb-4 p-3 border rounded bg-white">
+                <div class="col-2">
+                    <div class="p-3 bg-primary text-white text-center rounded">
+                        A
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="p-3 bg-success text-white text-center rounded">
+                        B
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="p-3 bg-warning text-dark text-center rounded">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exemplo: espaçamento ao redor -->
+            <h3 class="h5 mt-4 mb-3">
+                justify-content-around
+            </h3>
+
+            <!-- 
+                justify-content-around:
+                distribui espaço ao redor das colunas.
+            -->
+            <div class="row justify-content-around g-3 mb-4 p-3 border rounded bg-white">
+                <div class="col-2">
+                    <div class="p-3 bg-primary text-white text-center rounded">
+                        A
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="p-3 bg-success text-white text-center rounded">
+                        B
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="p-3 bg-warning text-dark text-center rounded">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exemplo: espaçamento uniforme -->
+            <h3 class="h5 mt-4 mb-3">
+                justify-content-evenly
+            </h3>
+
+            <!-- 
+                justify-content-evenly:
+                distribui os espaços de forma igual entre início, meio e fim.
+            -->
+            <div class="row justify-content-evenly g-3 mb-4 p-3 border rounded bg-white">
+                <div class="col-2">
+                    <div class="p-3 bg-primary text-white text-center rounded">
+                        A
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="p-3 bg-success text-white text-center rounded">
+                        B
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="p-3 bg-warning text-dark text-center rounded">
+                        C
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parte 2: alinhamento vertical de todas as colunas -->
+        <section class="mb-5" aria-labelledby="alinhamento-vertical">
+            <h2 id="alinhamento-vertical" class="h4 mb-4">
+                2. Alinhamento vertical com align-items
+            </h2>
+
+            <p>
+                As classes <code>align-items-*</code> também são aplicadas na <code>row</code>.
+                Elas controlam o alinhamento vertical de todas as colunas ao mesmo tempo.
+            </p>
+
+            <p>
+                Para visualizar melhor o efeito, a <code>row</code> abaixo recebeu uma altura
+                definida com <code>min-height</code>.
+            </p>
+
+            <!-- 
+                align-items-start:
+                alinha todas as colunas no topo da row.
+            -->
+            <h3 class="h5 mt-4 mb-3">
+                align-items-start
+            </h3>
+
+            <div class="row align-items-start g-3 mb-4 p-3 border rounded bg-white" style="min-height: 220px;">
+                <div class="col">
+                    <div class="p-3 bg-primary text-white text-center rounded">
+                        Coluna A
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3 bg-success text-white text-center rounded">
+                        Coluna B com mais conteúdo para aumentar a altura do bloco.
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3 bg-warning text-dark text-center rounded">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <!-- 
+                align-items-center:
+                alinha todas as colunas no centro vertical da row.
+            -->
+            <h3 class="h5 mt-4 mb-3">
+                align-items-center
+            </h3>
+
+            <div class="row align-items-center g-3 mb-4 p-3 border rounded bg-white" style="min-height: 220px;">
+                <div class="col">
+                    <div class="p-3 bg-primary text-white text-center rounded">
+                        Coluna A
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3 bg-success text-white text-center rounded">
+                        Coluna B com mais conteúdo para aumentar a altura do bloco.
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3 bg-warning text-dark text-center rounded">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <!-- 
+                align-items-end:
+                alinha todas as colunas na parte inferior da row.
+            -->
+            <h3 class="h5 mt-4 mb-3">
+                align-items-end
+            </h3>
+
+            <div class="row align-items-end g-3 mb-4 p-3 border rounded bg-white" style="min-height: 220px;">
+                <div class="col">
+                    <div class="p-3 bg-primary text-white text-center rounded">
+                        Coluna A
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3 bg-success text-white text-center rounded">
+                        Coluna B com mais conteúdo para aumentar a altura do bloco.
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3 bg-warning text-dark text-center rounded">
+                        C
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parte 3: alinhamento individual -->
+        <section class="mb-5" aria-labelledby="alinhamento-individual">
+            <h2 id="alinhamento-individual" class="h4 mb-4">
+                3. Alinhamento individual com align-self
+            </h2>
+
+            <p>
+                As classes <code>align-self-*</code> são aplicadas diretamente na coluna.
+                Elas servem para alinhar uma coluna específica de forma diferente das outras.
+            </p>
+
+            <!-- 
+                align-self-start: alinha somente esta coluna no topo.
+                align-self-center: alinha somente esta coluna no centro.
+                align-self-end: alinha somente esta coluna no fim.
+            -->
+            <div class="row g-3 p-3 border rounded bg-white" style="min-height: 260px;">
+                <div class="col align-self-start">
+                    <div class="p-3 bg-primary text-white text-center rounded">
+                        align-self-start
+                    </div>
+                </div>
+
+                <div class="col align-self-center">
+                    <div class="p-3 bg-success text-white text-center rounded">
+                        align-self-center
+                    </div>
+                </div>
+
+                <div class="col align-self-end">
+                    <div class="p-3 bg-warning text-dark text-center rounded">
+                        align-self-end
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumo da aula -->
+        <section class="mb-5" aria-labelledby="resumo-aula">
+            <h2 id="resumo-aula" class="h4 mb-3">
+                Resumo da aula
+            </h2>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <code>justify-content-start</code>: alinha as colunas no início da linha.
+                </li>
+
+                <li class="list-group-item">
+                    <code>justify-content-center</code>: centraliza as colunas horizontalmente.
+                </li>
+
+                <li class="list-group-item">
+                    <code>justify-content-end</code>: alinha as colunas no final da linha.
+                </li>
+
+                <li class="list-group-item">
+                    <code>justify-content-around</code>: cria espaço ao redor das colunas.
+                </li>
+
+                <li class="list-group-item">
+                    <code>justify-content-evenly</code>: distribui os espaços de forma uniforme.
+                </li>
+
+                <li class="list-group-item">
+                    <code>align-items-start</code>: alinha todas as colunas no topo da row.
+                </li>
+
+                <li class="list-group-item">
+                    <code>align-items-center</code>: alinha todas as colunas no centro vertical da row.
+                </li>
+
+                <li class="list-group-item">
+                    <code>align-items-end</code>: alinha todas as colunas no final vertical da row.
+                </li>
+
+                <li class="list-group-item">
+                    <code>align-self-start</code>, <code>align-self-center</code> e <code>align-self-end</code>:
+                    alinham uma coluna específica.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Navegação entre aulas -->
+        <nav class="d-flex justify-content-between mb-5" aria-label="Navegação entre aulas">
+            <a href="aula5.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula7.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+        </nav>
+
+    </main>>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+    crossorigin="anonymous"></script>
+
+</body>
+</html>

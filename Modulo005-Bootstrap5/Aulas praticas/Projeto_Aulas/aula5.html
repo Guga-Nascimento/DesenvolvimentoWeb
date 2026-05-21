@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 5 - Column Offsets</title>
+
+    <!-- CSS do Bootstrap -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+        crossorigin="anonymous"
+    >
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- 
+        main representa o conteúdo principal da página.
+        container centraliza o conteúdo e aplica largura máxima responsiva.
+    -->
+    <main class="container mt-5 mb-5">
+
+        <!-- Cabeçalho da aula -->
+        <section class="text-center mb-5" aria-labelledby="titulo-aula">
+            <h1 id="titulo-aula" class="mb-4">
+                Aula 5 - Column Offsets
+            </h1>
+
+            <p class="lead">
+                Nesta aula, vamos aprender como deslocar colunas para a direita
+                usando as classes de <strong>offset</strong> do Bootstrap.
+            </p>
+        </section>
+
+        <!-- Explicação da aula -->
+        <section class="mb-5" aria-labelledby="explicacao-aula">
+            <h2 id="explicacao-aula" class="h4 mb-3">
+                O que são Column Offsets?
+            </h2>
+
+            <p>
+                No Bootstrap, as classes de <code>offset</code> servem para criar
+                um espaço vazio antes de uma coluna.
+            </p>
+
+            <p>
+                Esse deslocamento segue a mesma lógica do grid de 12 colunas.
+                Por exemplo: se uma coluna ocupa <code>8</code> partes e recebe
+                <code>offset-2</code>, ela será empurrada 2 partes para a direita.
+            </p>
+
+            <p>
+                Esse recurso é útil para centralizar blocos, criar espaçamentos laterais
+                e posicionar elementos sem precisar escrever CSS personalizado.
+            </p>
+        </section>
+
+        <!-- Exercício prático -->
+        <section class="mb-5" aria-labelledby="exercicio-pratico">
+            <h2 id="exercicio-pratico" class="h4 mb-4">
+                Exercício prático
+            </h2>
+
+            <!-- 
+                row cria uma linha no sistema de grid.
+                Dentro dela colocamos uma coluna com diferentes tamanhos e offsets.
+            -->
+            <div class="row">
+
+                <!-- 
+                    col-12:
+                    No celular, a coluna ocupa 12 partes, ou seja, 100% da largura.
+
+                    col-sm-8:
+                    A partir de 576px, a coluna ocupa 8 partes do grid.
+
+                    offset-sm-2:
+                    A partir de 576px, a coluna é empurrada 2 partes para a direita.
+                    Resultado: 2 vazias + 8 ocupadas + 2 vazias.
+
+                    col-lg-4:
+                    A partir de 992px, a coluna ocupa 4 partes do grid.
+
+                    offset-lg-4:
+                    A partir de 992px, a coluna é empurrada 4 partes para a direita.
+                    Resultado: 4 vazias + 4 ocupadas + 4 vazias.
+                -->
+                <div class="col-12 col-sm-8 offset-sm-2 col-lg-4 offset-lg-4">
+                    <div class="p-4 border rounded bg-primary text-white text-center">
+                        <h3 class="mb-0">
+                            A
+                        </h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Explicação visual do comportamento -->
+        <section class="mb-5" aria-labelledby="comportamento-layout">
+            <h2 id="comportamento-layout" class="h4 mb-3">
+                Como o layout se comporta?
+            </h2>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    No celular, <code>col-12</code> faz o bloco ocupar a largura inteira.
+                </li>
+
+                <li class="list-group-item">
+                    A partir de <code>sm</code>, o bloco ocupa <code>8</code> colunas e recebe
+                    <code>offset-sm-2</code>.
+                </li>
+
+                <li class="list-group-item">
+                    Isso cria a estrutura: <code>2 espaços vazios + 8 colunas ocupadas + 2 espaços vazios</code>.
+                </li>
+
+                <li class="list-group-item">
+                    A partir de <code>lg</code>, o bloco ocupa <code>4</code> colunas e recebe
+                    <code>offset-lg-4</code>.
+                </li>
+
+                <li class="list-group-item">
+                    Isso cria a estrutura: <code>4 espaços vazios + 4 colunas ocupadas + 4 espaços vazios</code>.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Segundo exemplo para reforçar o aprendizado -->
+        <section class="mb-5" aria-labelledby="segundo-exemplo">
+            <h2 id="segundo-exemplo" class="h4 mb-4">
+                Outro exemplo com offset
+            </h2>
+
+            <p>
+                Neste exemplo, temos uma coluna menor sendo deslocada apenas em telas médias.
+            </p>
+
+            <div class="row">
+                <div class="col-12 col-md-6 offset-md-3">
+                    <div class="p-4 border rounded bg-success text-white text-center">
+                        <h3 class="mb-2">
+                            Bloco centralizado
+                        </h3>
+
+                        <p class="mb-0">
+                            Este bloco usa <code>col-md-6</code> com <code>offset-md-3</code>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumo da aula -->
+        <section class="mb-5" aria-labelledby="resumo-aula">
+            <h2 id="resumo-aula" class="h4 mb-3">
+                Resumo das classes usadas
+            </h2>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <code>container</code>: centraliza o conteúdo e define uma largura máxima responsiva.
+                </li>
+
+                <li class="list-group-item">
+                    <code>row</code>: cria uma linha dentro do sistema de grid.
+                </li>
+
+                <li class="list-group-item">
+                    <code>col-12</code>: faz a coluna ocupar 12 partes do grid no celular.
+                </li>
+
+                <li class="list-group-item">
+                    <code>col-sm-8</code>: faz a coluna ocupar 8 partes a partir de 576px.
+                </li>
+
+                <li class="list-group-item">
+                    <code>offset-sm-2</code>: empurra a coluna 2 partes para a direita a partir de 576px.
+                </li>
+
+                <li class="list-group-item">
+                    <code>col-lg-4</code>: faz a coluna ocupar 4 partes a partir de 992px.
+                </li>
+
+                <li class="list-group-item">
+                    <code>offset-lg-4</code>: empurra a coluna 4 partes para a direita a partir de 992px.
+                </li>
+
+                <li class="list-group-item">
+                    <code>p-4</code>: adiciona espaçamento interno.
+                </li>
+
+                <li class="list-group-item">
+                    <code>border</code>: adiciona borda ao bloco.
+                </li>
+
+                <li class="list-group-item">
+                    <code>rounded</code>: arredonda os cantos.
+                </li>
+
+                <li class="list-group-item">
+                    <code>text-center</code>: centraliza o texto.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Navegação entre aulas -->
+        <nav class="d-flex justify-content-between mb-5" aria-label="Navegação entre aulas">
+
+            <a href="aula4.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula6.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+
+        </nav>
+
+    </main>
+
+    <!-- JavaScript do Bootstrap -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+        crossorigin="anonymous">
+    </script>
+
+</body>
+</html>
