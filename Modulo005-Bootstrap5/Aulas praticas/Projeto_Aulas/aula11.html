@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 11 - Imagens Responsivas e Cores no Bootstrap</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container mt-5">
+
+        <!-- Cabeçalho da aula -->
+        <div class="text-center mb-5">
+            <h1 class="mb-3">Aula 11 - Imagens Responsivas e Cores no Bootstrap</h1>
+
+            <p class="text-muted">
+                Nesta aula, praticamos o uso da classe <strong>img-fluid</strong> para tornar imagens responsivas
+                e também fizemos uma breve introdução às cores padrão do Bootstrap.
+            </p>
+        </div>
+
+        <!-- Parte 1: Imagens responsivas -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">1. Imagens responsivas com img-fluid</h2>
+
+            <p>
+                A classe <strong>img-fluid</strong> é usada para fazer com que a imagem respeite
+                o tamanho disponível dentro do elemento onde ela está inserida.
+            </p>
+
+            <p>
+                Na prática, essa classe aplica uma largura máxima de <strong>100%</strong>
+                e mantém a altura automática, evitando que a imagem fique distorcida.
+            </p>
+
+            <div class="bg-light border rounded p-4 mb-4">
+                <p class="mb-2">
+                    <strong>max-width: 100%;</strong> impede que a imagem ultrapasse a largura disponível.
+                </p>
+
+                <p class="mb-0">
+                    <strong>height: auto;</strong> mantém a proporção original da imagem.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Exemplo com imagem pequena -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">2. Exemplo com imagem pequena</h2>
+
+            <p>
+                A imagem pequena normalmente não causa tantos problemas no layout,
+                pois já possui uma largura menor.
+            </p>
+
+            <div class="border rounded p-4">
+                <img src="assets/img/imagem_pequena.png" alt="Imagem pequena usada como exemplo na aula"
+                    class="img-fluid">
+            </div>
+
+        </section>
+
+        <!-- Exemplo com imagem grande -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">3. Exemplo com imagem grande responsiva</h2>
+
+            <p>
+                Quando usamos uma imagem muito grande, ela pode ultrapassar o espaço da página.
+                Por isso, usamos <strong>img-fluid</strong> para limitar a imagem ao tamanho disponível.
+            </p>
+
+            <div class="border rounded p-4">
+                <img src="assets/img/imagem_grande.png" alt="Imagem grande responsiva usando a classe img-fluid"
+                    class="img-fluid">
+            </div>
+
+        </section>
+
+        <!-- Imagem dentro do Grid -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">4. Imagens dentro da grelha de layout</h2>
+
+            <p>
+                Neste exemplo, a imagem grande foi colocada dentro de colunas do Grid.
+                Mesmo sendo uma imagem grande, ela respeita o espaço de cada coluna.
+            </p>
+            <br>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-4">
+                    <div class="border rounded p-3 h-100">
+                        <img src="assets/img/imagem_grande.jpg" alt="Imagem grande dentro da primeira coluna"
+                            class="img-fluid mb-3">
+
+                        <p class="mb-0 text-center">
+                            Coluna 1
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="border rounded p-3 h-100">
+                        <img src="assets/img/imagem_grande.jpg" alt="Imagem grande dentro da segunda coluna"
+                            class="img-fluid mb-3">
+
+                        <p class="mb-0 text-center">
+                            Coluna 2
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="border rounded p-3 h-100">
+                        <img src="assets/img/imagem_grande.jpg" alt="Imagem grande dentro da terceira coluna"
+                            class="img-fluid mb-3">
+
+                        <p class="mb-0 text-center">
+                            Coluna 3
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Parte 2: Cores no Bootstrap -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">5. Cores de fundo no Bootstrap</h2>
+
+            <p>
+                O Bootstrap possui algumas cores padrão que podem ser aplicadas em fundos,
+                textos, bordas, botões, alertas e outros componentes.
+            </p>
+
+            <div class="mb-4">
+
+                <div class="bg-primary p-3 text-white">
+                    bg-primary
+                </div>
+
+                <div class="bg-secondary p-3 text-white">
+                    bg-secondary
+                </div>
+
+                <div class="bg-success p-3 text-white">
+                    bg-success
+                </div>
+
+                <div class="bg-danger p-3 text-white">
+                    bg-danger
+                </div>
+
+                <div class="bg-warning p-3 text-dark">
+                    bg-warning
+                </div>
+
+                <div class="bg-info p-3 text-dark">
+                    bg-info
+                </div>
+
+                <div class="bg-light p-3 text-dark border">
+                    bg-light
+                </div>
+
+                <div class="bg-dark p-3 text-white">
+                    bg-dark
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Cores em textos -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">6. Cores em textos</h2>
+
+            <p>
+                As mesmas palavras usadas nas cores de fundo também podem ser aplicadas
+                na cor dos textos usando classes com <strong>text-</strong>.
+            </p>
+
+            <div class="border rounded p-4">
+
+                <p class="text-primary">
+                    Texto com text-primary
+                </p>
+
+                <p class="text-secondary">
+                    Texto com text-secondary
+                </p>
+
+                <p class="text-success">
+                    Texto com text-success
+                </p>
+
+                <p class="text-danger">
+                    Texto com text-danger
+                </p>
+
+                <p class="text-warning">
+                    Texto com text-warning
+                </p>
+
+                <p class="text-info">
+                    Texto com text-info
+                </p>
+
+                <p class="text-dark mb-0">
+                    Texto com text-dark
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Comparação prática -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">7. Exemplo prático com imagem e cores</h2>
+
+            <p>
+                Neste exemplo, combinamos Grid, imagem responsiva, espaçamento, cor de fundo e cor de texto.
+            </p>
+            <br>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-4">
+                    <div class="bg-primary text-white rounded p-3 h-100">
+                        <img src="assets/img/imagem_pequena.jpg" alt="Imagem pequena em card azul"
+                            class="img-fluid mb-3">
+
+                        <h3 class="h5">Card Primary</h3>
+
+                        <p class="mb-0">
+                            Exemplo usando bg-primary, text-white, p-3 e img-fluid.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="bg-success text-white rounded p-3 h-100">
+                        <img src="assets/img/imagem_pequena.jpg" alt="Imagem pequena em card verde"
+                            class="img-fluid mb-3">
+
+                        <h3 class="h5">Card Success</h3>
+
+                        <p class="mb-0">
+                            Exemplo usando bg-success para destacar uma área positiva.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="bg-warning text-dark rounded p-3 h-100">
+                        <img src="assets/img/imagem_pequena.jpg" alt="Imagem pequena em card amarelo"
+                            class="img-fluid mb-3">
+
+                        <h3 class="h5">Card Warning</h3>
+
+                        <p class="mb-0">
+                            Exemplo usando bg-warning com text-dark para manter boa leitura.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Resumo da aula -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">Resumo da aula</h2>
+
+            <div class="bg-light border rounded p-4">
+                <ul class="mb-0">
+                    <li>A classe img-fluid torna imagens responsivas.</li>
+                    <li>img-fluid evita que imagens grandes ultrapassem o espaço disponível.</li>
+                    <li>Dentro do Grid, a imagem respeita o tamanho da coluna.</li>
+                    <li>As classes bg-* aplicam cores de fundo.</li>
+                    <li>As classes text-* aplicam cores no texto.</li>
+                    <li>As cores padrão do Bootstrap são úteis, mas possuem uma paleta limitada.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Navegação entre aulas -->
+        <div class="d-flex justify-content-between mb-5">
+
+            <a href="aula10.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula12.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

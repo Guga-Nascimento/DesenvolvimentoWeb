@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 9 - Gutters na grelha de layout</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+    crossorigin="anonymous">
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <main class="container mt-5 mb-5">
+
+        <!-- Cabeçalho da aula -->
+        <section class="row mb-4">
+            <div class="col-12 text-center">
+                <h1>Aula 9 - Gutters na grelha de layout</h1>
+
+                <p class="text-muted mb-0">
+                    Nesta aula, praticamos os gutters do Bootstrap, que controlam os espaçamentos
+                    entre colunas e linhas dentro do sistema de Grid.
+                </p>
+            </div>
+        </section>
+
+        <!-- Introdução -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <div class="p-4 bg-light border rounded">
+                    <h2 class="mb-3">O que são gutters?</h2>
+
+                    <p class="mb-0">
+                        Gutters são os espaçamentos entre as colunas e linhas dentro de uma
+                        <strong>row</strong>. No Bootstrap, usamos classes como
+                        <strong>g-0</strong>, <strong>g-3</strong>, <strong>gx-4</strong> e
+                        <strong>gy-4</strong> para controlar esses espaços.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exemplo com g-3 -->
+        <section class="mb-5">
+            <h2 class="mb-3">Exemplo 1 - Gutters com g-3</h2>
+
+            <p>
+                A classe <strong>g-3</strong> aplica espaçamento geral entre colunas e linhas.
+            </p>
+
+            <div class="row g-3">
+
+                <div class="col-12 col-md-4">
+                    <div class="p-3 bg-primary text-white text-center rounded">
+                        Coluna 1
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="p-3 bg-success text-white text-center rounded">
+                        Coluna 2
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="p-3 bg-warning text-dark text-center rounded">
+                        Coluna 3
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Exemplo com g-0 -->
+        <section class="mb-5">
+            <h2 class="mb-3">Exemplo 2 - Sem gutters com g-0</h2>
+
+            <p>
+                A classe <strong>g-0</strong> remove o espaçamento entre as colunas.
+            </p>
+
+            <div class="row g-0">
+
+                <div class="col-12 col-md-4">
+                    <div class="p-3 bg-primary text-white text-center">
+                        Coluna 1
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="p-3 bg-success text-white text-center">
+                        Coluna 2
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="p-3 bg-warning text-dark text-center">
+                        Coluna 3
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Exemplo com gx-5 -->
+        <section class="mb-5">
+            <h2 class="mb-3">Exemplo 3 - Gutter horizontal com gx-5</h2>
+
+            <p>
+                A classe <strong>gx-5</strong> controla apenas o espaçamento horizontal entre as colunas.
+            </p>
+
+            <div class="row gx-5 gy-3">
+
+                <div class="col-12 col-md-6">
+                    <div class="p-3 bg-info text-dark text-center rounded">
+                        Coluna com gx-5
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="p-3 bg-info text-dark text-center rounded">
+                        Coluna com gx-5
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Exemplo com gy-4 -->
+        <section class="mb-5">
+            <h2 class="mb-3">Exemplo 4 - Gutter vertical com gy-4</h2>
+
+            <p>
+                A classe <strong>gy-4</strong> controla apenas o espaçamento vertical entre as linhas.
+            </p>
+
+            <div class="row gy-4">
+
+                <div class="col-12 col-md-6">
+                    <div class="p-3 bg-secondary text-white text-center rounded">
+                        Bloco 1
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="p-3 bg-secondary text-white text-center rounded">
+                        Bloco 2
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="p-3 bg-secondary text-white text-center rounded">
+                        Bloco 3
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="p-3 bg-secondary text-white text-center rounded">
+                        Bloco 4
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Resumo da aula -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <div class="p-4 border rounded bg-light">
+                    <h2 class="mb-3">Resumo da aula</h2>
+
+                    <ul class="mb-0">
+                        <li><strong>g-0</strong>: remove os gutters.</li>
+                        <li><strong>g-3</strong>: aplica espaçamento geral entre linhas e colunas.</li>
+                        <li><strong>gx-5</strong>: aplica espaçamento apenas no eixo horizontal.</li>
+                        <li><strong>gy-4</strong>: aplica espaçamento apenas no eixo vertical.</li>
+                        <li><strong>gutters</strong>: controlam o espaço entre colunas e linhas do Grid.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegação entre aulas -->
+        <nav class="d-flex justify-content-between mb-5" aria-label="Navegação entre aulas">
+
+            <a href="aula8.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula10.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+    crossorigin="anonymous"></script>
+
+</body>
+</html>

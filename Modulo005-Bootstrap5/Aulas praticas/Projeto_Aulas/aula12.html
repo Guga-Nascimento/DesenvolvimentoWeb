@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 12 - Tabelas no Bootstrap</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container mt-5">
+
+        <!-- Cabeçalho da aula -->
+        <div class="text-center mb-5">
+            <h1 class="mb-3">Aula 12 - Tabelas no Bootstrap</h1>
+
+            <p class="text-muted">
+                Nesta aula, praticamos a criação e formatação de tabelas usando as classes
+                do Bootstrap. O foco foi entender como melhorar a apresentação de dados
+                sem usar tabelas para montar layout.
+            </p>
+        </div>
+
+        <!-- Introdução conceitual -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">1. Para que servem as tabelas no HTML?</h2>
+
+            <p>
+                As tabelas devem ser usadas para apresentar <strong>dados organizados em linhas e colunas</strong>.
+                Antigamente, tabelas também eram usadas para montar layouts de páginas, mas isso é uma má prática.
+            </p>
+
+            <p>
+                Atualmente, para layout usamos recursos como <strong>Flexbox</strong>,
+                <strong>CSS Grid</strong> e o próprio <strong>Grid do Bootstrap</strong>.
+                Já as tabelas ficam reservadas para dados, relatórios, cadastros, comparações e listagens.
+            </p>
+
+            <div class="bg-light border rounded p-4">
+                <p class="mb-2">
+                    <strong>Uso correto:</strong> apresentar dados.
+                </p>
+
+                <p class="mb-0">
+                    <strong>Uso incorreto:</strong> montar o layout visual da página.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Tabela HTML sem Bootstrap -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">2. Tabela HTML sem formatação do Bootstrap</h2>
+
+            <p>
+                Uma tabela HTML pura funciona normalmente, mas visualmente fica muito simples.
+                O Bootstrap não estiliza totalmente a tabela sozinho. Para aplicar o estilo,
+                precisamos usar a classe <strong>table</strong>.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Categoria</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Notebook</td>
+                        <td>Informática</td>
+                        <td>R$ 3.500,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mouse</td>
+                        <td>Acessório</td>
+                        <td>R$ 80,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Teclado</td>
+                        <td>Acessório</td>
+                        <td>R$ 150,00</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total estimado</td>
+                        <td>R$ 3.730,00</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </section>
+
+        <!-- Tabela com classe table -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">3. Tabela com a classe table</h2>
+
+            <p>
+                A classe <strong>table</strong> é a base para estilizar tabelas com Bootstrap.
+                Ela aplica largura de 100%, espaçamento interno nas células e linhas horizontais.
+            </p>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Categoria</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Notebook</td>
+                        <td>Informática</td>
+                        <td>R$ 3.500,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mouse</td>
+                        <td>Acessório</td>
+                        <td>R$ 80,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Teclado</td>
+                        <td>Acessório</td>
+                        <td>R$ 150,00</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total estimado</td>
+                        <td>R$ 3.730,00</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </section>
+
+        <!-- Tabelas com cores -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">4. Tabelas com cores</h2>
+
+            <p>
+                O Bootstrap permite aplicar cores diretamente na tabela inteira usando classes como
+                <strong>table-primary</strong>, <strong>table-success</strong>,
+                <strong>table-warning</strong> e <strong>table-danger</strong>.
+            </p>
+
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th>Aluno</th>
+                        <th>Módulo</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Gustavo</td>
+                        <td>HTML</td>
+                        <td>Concluído</td>
+                    </tr>
+
+                    <tr>
+                        <td>Gustavo</td>
+                        <td>CSS</td>
+                        <td>Concluído</td>
+                    </tr>
+
+                    <tr>
+                        <td>Gustavo</td>
+                        <td>Bootstrap</td>
+                        <td>Em andamento</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mt-3">
+                A classe de cor pode ser aplicada na tabela inteira, em uma linha específica ou até em uma célula.
+            </p>
+
+        </section>
+
+        <!-- Cores aplicadas por linha e por célula -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">5. Cores em linhas e células</h2>
+
+            <p>
+                Também podemos aplicar classes de cor em uma linha específica com <strong>tr</strong>
+                ou em uma célula específica com <strong>td</strong>.
+            </p>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tarefa</th>
+                        <th>Prioridade</th>
+                        <th>Situação</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="table-success">
+                        <td>Concluir módulo de HTML</td>
+                        <td>Alta</td>
+                        <td>Finalizado</td>
+                    </tr>
+
+                    <tr class="table-warning">
+                        <td>Revisar CSS responsivo</td>
+                        <td>Média</td>
+                        <td>Revisão</td>
+                    </tr>
+
+                    <tr>
+                        <td>Estudar tabelas no Bootstrap</td>
+                        <td class="table-danger">Alta</td>
+                        <td>Em andamento</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Tabela listrada -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">6. Tabela listrada com table-striped</h2>
+
+            <p>
+                A classe <strong>table-striped</strong> alterna a cor das linhas do corpo da tabela.
+                Isso melhora a leitura quando temos muitos dados.
+            </p>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tecnologia</th>
+                        <th>Uso principal</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>HTML</td>
+                        <td>Estrutura da página</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>CSS</td>
+                        <td>Estilização visual</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>JavaScript</td>
+                        <td>Interatividade</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Bootstrap</td>
+                        <td>Componentes e responsividade</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Tabela com colunas listradas -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">7. Colunas listradas com table-striped-columns</h2>
+
+            <p>
+                A classe <strong>table-striped-columns</strong> alterna a cor das colunas.
+                Ela é útil quando a comparação entre colunas é mais importante que a leitura por linha.
+            </p>
+
+            <table class="table table-striped-columns">
+                <thead>
+                    <tr>
+                        <th>Plano</th>
+                        <th>Básico</th>
+                        <th>Intermediário</th>
+                        <th>Avançado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Landing Page</td>
+                        <td>Sim</td>
+                        <td>Sim</td>
+                        <td>Sim</td>
+                    </tr>
+
+                    <tr>
+                        <td>Site institucional</td>
+                        <td>Não</td>
+                        <td>Sim</td>
+                        <td>Sim</td>
+                    </tr>
+
+                    <tr>
+                        <td>Integrações</td>
+                        <td>Não</td>
+                        <td>Não</td>
+                        <td>Sim</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Tabela com hover -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">8. Efeito hover com table-hover</h2>
+
+            <p>
+                A classe <strong>table-hover</strong> cria um destaque visual quando passamos
+                o mouse sobre as linhas do corpo da tabela.
+            </p>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Cliente</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Empresa A</td>
+                        <td>Ativo</td>
+                    </tr>
+
+                    <tr>
+                        <td>002</td>
+                        <td>Empresa B</td>
+                        <td>Em análise</td>
+                    </tr>
+
+                    <tr>
+                        <td>003</td>
+                        <td>Empresa C</td>
+                        <td>Finalizado</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Linha e célula ativa -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">9. Linha e célula ativa com table-active</h2>
+
+            <p>
+                A classe <strong>table-active</strong> indica visualmente que uma linha ou célula
+                está selecionada ou em destaque.
+            </p>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Aula</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="table-active">
+                        <td>Bootstrap</td>
+                        <td>Aula 12</td>
+                        <td>Selecionada</td>
+                    </tr>
+
+                    <tr>
+                        <td>Bootstrap</td>
+                        <td>Aula 13</td>
+                        <td class="table-active">Próxima</td>
+                    </tr>
+
+                    <tr>
+                        <td>Bootstrap</td>
+                        <td>Aula 14</td>
+                        <td>Aguardando</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Bordas -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">10. Bordas em tabelas</h2>
+
+            <p>
+                Por padrão, o Bootstrap aplica linhas horizontais. Mas podemos controlar melhor as bordas
+                usando classes como <strong>table-bordered</strong> e <strong>table-borderless</strong>.
+            </p>
+
+            <h3 class="h5 mb-3">Tabela com bordas</h3>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Domínio</td>
+                        <td>1</td>
+                        <td>R$ 40,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hospedagem</td>
+                        <td>1</td>
+                        <td>R$ 30,00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="h5 mt-4 mb-3">Tabela sem bordas</h3>
+
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Layout</td>
+                        <td>1</td>
+                        <td>R$ 500,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Manutenção</td>
+                        <td>1</td>
+                        <td>R$ 150,00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Bordas com cor -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">11. Bordas coloridas</h2>
+
+            <p>
+                Também podemos combinar <strong>table-bordered</strong> com classes de borda,
+                como <strong>border-primary</strong>, <strong>border-success</strong> ou
+                <strong>border-danger</strong>.
+            </p>
+
+            <table class="table table-bordered border-primary">
+                <thead>
+                    <tr>
+                        <th>Projeto</th>
+                        <th>Tecnologia</th>
+                        <th>Objetivo</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>CasaDigitalRP</td>
+                        <td>HTML, CSS e JS</td>
+                        <td>Portfólio e captação de clientes</td>
+                    </tr>
+
+                    <tr>
+                        <td>Desenvolvimento Web</td>
+                        <td>Bootstrap</td>
+                        <td>Estudos práticos</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Tabela compacta -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">12. Tabela compacta com table-sm</h2>
+
+            <p>
+                A classe <strong>table-sm</strong> reduz o espaçamento interno das células.
+                Isso é útil quando a tabela possui muitas linhas ou precisa ocupar menos espaço na tela.
+            </p>
+
+            <table class="table table-sm table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Aula</th>
+                        <th>Assunto</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>10</td>
+                        <td>Aula 10</td>
+                        <td>CSS Grid e Tipografia</td>
+                    </tr>
+
+                    <tr>
+                        <td>11</td>
+                        <td>Aula 11</td>
+                        <td>Imagens responsivas e cores</td>
+                    </tr>
+
+                    <tr>
+                        <td>12</td>
+                        <td>Aula 12</td>
+                        <td>Tabelas no Bootstrap</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Cabeçalho colorido -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">13. Cabeçalho da tabela com cor</h2>
+
+            <p>
+                Podemos aplicar classes de cor diretamente no <strong>thead</strong>.
+                A classe <strong>table-dark</strong>, por exemplo, cria um cabeçalho escuro
+                com texto claro automaticamente.
+            </p>
+
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Linguagem</th>
+                        <th>Categoria</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Marcação</td>
+                        <td>Estrutura</td>
+                    </tr>
+
+                    <tr>
+                        <td>CSS</td>
+                        <td>Estilo</td>
+                        <td>Aparência</td>
+                    </tr>
+
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Programação</td>
+                        <td>Interatividade</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Combinação de classes -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">14. Combinando várias classes</h2>
+
+            <p>
+                Uma das ideias mais importantes do Bootstrap é combinar classes para alcançar
+                o resultado visual desejado. No exemplo abaixo usamos:
+                <strong>table</strong>, <strong>table-striped</strong>, <strong>table-hover</strong>,
+                <strong>table-bordered</strong> e <strong>border-success</strong>.
+            </p>
+
+            <table class="table table-striped table-hover table-bordered border-success">
+                <thead class="table-success">
+                    <tr>
+                        <th>Etapa</th>
+                        <th>Descrição</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Estudar o conceito da aula</td>
+                        <td>Concluído</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Aplicar as classes no HTML</td>
+                        <td>Concluído</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Documentar no GitHub</td>
+                        <td>Em andamento</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Tabela responsiva -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">15. Tabela responsiva com table-responsive</h2>
+
+            <p>
+                Quando uma tabela tem muitas colunas, ela pode estourar a largura da tela em celulares.
+                Para evitar isso, colocamos a tabela dentro de uma <strong>div</strong> com a classe
+                <strong>table-responsive</strong>.
+            </p>
+
+            <p>
+                Essa classe cria uma rolagem horizontal quando necessário, mantendo a página mais organizada
+                em telas pequenas.
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Projeto</th>
+                            <th>Tecnologia</th>
+                            <th>Tipo</th>
+                            <th>Status</th>
+                            <th>Repositório</th>
+                            <th>Observação</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Desenvolvimento Web</td>
+                            <td>HTML, CSS, JS e Bootstrap</td>
+                            <td>Estudo</td>
+                            <td>Em andamento</td>
+                            <td>GitHub</td>
+                            <td>Portfólio de evolução</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>CasaDigitalRP</td>
+                            <td>HTML, CSS e JavaScript</td>
+                            <td>Projeto próprio</td>
+                            <td>Em desenvolvimento</td>
+                            <td>GitHub</td>
+                            <td>Site para pequenos negócios</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>DSCommerce</td>
+                            <td>Java e Spring Boot</td>
+                            <td>Back-end</td>
+                            <td>Concluído</td>
+                            <td>GitHub</td>
+                            <td>Projeto para portfólio Java</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Resumo da aula -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">Resumo da aula</h2>
+
+            <div class="bg-light border rounded p-4">
+                <ul class="mb-0">
+                    <li><strong>table</strong>: classe base para estilizar tabelas no Bootstrap.</li>
+                    <li><strong>table-primary</strong>, <strong>table-success</strong>, <strong>table-warning</strong> e
+                        outras: aplicam cores.</li>
+                    <li><strong>table-striped</strong>: cria linhas alternadas.</li>
+                    <li><strong>table-striped-columns</strong>: cria colunas alternadas.</li>
+                    <li><strong>table-hover</strong>: destaca linhas ao passar o mouse.</li>
+                    <li><strong>table-active</strong>: destaca uma linha ou célula específica.</li>
+                    <li><strong>table-bordered</strong>: adiciona bordas em toda a tabela.</li>
+                    <li><strong>table-borderless</strong>: remove as bordas da tabela.</li>
+                    <li><strong>border-primary</strong>: altera a cor das bordas.</li>
+                    <li><strong>table-sm</strong>: reduz o espaçamento interno das células.</li>
+                    <li><strong>table-dark</strong>: aplica visual escuro, muito usado no cabeçalho.</li>
+                    <li><strong>table-responsive</strong>: melhora a visualização de tabelas grandes em telas pequenas.
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Navegação entre aulas -->
+        <div class="d-flex justify-content-between mb-5">
+
+            <a href="aula11.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula13.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

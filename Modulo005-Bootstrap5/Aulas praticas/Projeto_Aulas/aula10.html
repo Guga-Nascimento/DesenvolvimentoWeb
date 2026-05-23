@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 10 - CSS Grid no Bootstrap e Tipografia</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container mt-5">
+
+        <!-- Cabeçalho da aula -->
+        <div class="text-center mb-5">
+            <h1 class="mb-3">Aula 10 - CSS Grid no Bootstrap e Tipografia</h1>
+
+            <p class="text-muted">
+                Nesta aula, estudamos a diferença entre o Grid tradicional do Bootstrap e o CSS Grid,
+                além de praticar classes de tipografia, alinhamento de texto e listas.
+            </p>
+        </div>
+
+        <!-- Parte 1: CSS Grid no Bootstrap -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">1. CSS Grid no Bootstrap</h2>
+
+            <p>
+                O Grid tradicional do Bootstrap, que usamos com
+                <strong>container</strong>, <strong>row</strong> e <strong>col</strong>,
+                é baseado em <strong>Flexbox</strong>.
+            </p>
+
+            <p>
+                Já o <strong>CSS Grid</strong> é um recurso próprio do CSS, usado para criar layouts
+                em formato de grade com linhas e colunas.
+            </p>
+
+            <div class="bg-light border rounded p-4 mb-4">
+                <p class="mb-2">
+                    <strong>Bootstrap Grid:</strong> usa Flexbox por padrão.
+                </p>
+
+                <p class="mb-0">
+                    <strong>CSS Grid:</strong> é um modelo de layout nativo do CSS.
+                </p>
+            </div>
+
+            <p>
+                O Bootstrap também possui uma opção relacionada ao CSS Grid, mas ela pode depender
+                de configuração e recompilação com SASS. Por isso, neste momento, seguimos usando
+                o modelo tradicional do Bootstrap.
+            </p>
+
+            <div class="row g-3">
+                <div class="col-4">
+                    <div class="bg-info text-center p-3">
+                        col-4
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="bg-info text-center p-3">
+                        col-4
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="bg-info text-center p-3">
+                        col-4
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Parte 2: Tipografia -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">2. Tipografia no Bootstrap</h2>
+
+            <p>
+                A tipografia está relacionada à forma como os textos aparecem na página:
+                títulos, parágrafos, tamanhos, pesos, alinhamentos e listas.
+            </p>
+
+            <p>
+                O Bootstrap já aplica uma aparência padrão para as tags de título do HTML.
+            </p>
+
+            <div class="bg-light border rounded p-4 mb-4">
+                <h1>Este é um h1</h1>
+                <h2>Este é um h2</h2>
+                <h3>Este é um h3</h3>
+                <h4>Este é um h4</h4>
+                <h5>Este é um h5</h5>
+                <h6 class="mb-0">Este é um h6</h6>
+            </div>
+
+        </section>
+
+        <!-- Aparência de título em parágrafos -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">3. Classes de título em outros elementos</h2>
+
+            <p>
+                Também é possível usar classes como <strong>h1</strong>, <strong>h2</strong>
+                e <strong>h3</strong> em outros elementos, como parágrafos.
+            </p>
+
+            <div class="bg-light border rounded p-4">
+                <p class="h1">Parágrafo com aparência de h1</p>
+                <p class="h2">Parágrafo com aparência de h2</p>
+                <p class="h3 mb-0">Parágrafo com aparência de h3</p>
+            </div>
+
+        </section>
+
+        <!-- Display headings -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">4. Display headings</h2>
+
+            <p>
+                As classes <strong>display</strong> criam títulos maiores e com mais destaque.
+                Elas podem ser usadas em banners, chamadas principais ou seções de destaque.
+            </p>
+
+            <div class="bg-light border rounded p-4">
+                <h1 class="display-1">Display 1</h1>
+                <h1 class="display-2">Display 2</h1>
+                <h1 class="display-3">Display 3</h1>
+                <h1 class="display-4">Display 4</h1>
+                <h1 class="display-5">Display 5</h1>
+                <h1 class="display-6 mb-0">Display 6</h1>
+            </div>
+
+        </section>
+
+        <!-- Alinhamento de texto -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">5. Alinhamento de texto</h2>
+
+            <p>
+                O Bootstrap permite alinhar textos horizontalmente usando classes utilitárias.
+            </p>
+
+            <div class="bg-light border rounded p-4">
+                <p class="text-start">
+                    Texto alinhado à esquerda com text-start.
+                </p>
+
+                <p class="text-center">
+                    Texto centralizado com text-center.
+                </p>
+
+                <p class="text-end mb-0">
+                    Texto alinhado à direita com text-end.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Listas -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">6. Listas no Bootstrap</h2>
+
+            <p>
+                O Bootstrap também possui classes para alterar a apresentação das listas.
+            </p>
+
+            <div class="row g-4">
+
+                <!-- Lista normal -->
+                <div class="col-12 col-md-4">
+                    <div class="border rounded p-4 h-100">
+                        <h3 class="h5 mb-3">Lista normal</h3>
+
+                        <ul class="mb-0">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Lista sem marcadores -->
+                <div class="col-12 col-md-4">
+                    <div class="border rounded p-4 h-100">
+                        <h3 class="h5 mb-3">Lista sem estilo</h3>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>Bootstrap</li>
+                            <li>Grid</li>
+                            <li>Tipografia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Lista inline -->
+                <div class="col-12 col-md-4">
+                    <div class="border rounded p-4 h-100">
+                        <h3 class="h5 mb-3">Lista inline</h3>
+
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a href="#">Home</a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a href="#">Sobre</a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a href="#">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Exemplo de navegação usando lista inline -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">7. Exemplo prático com navegação</h2>
+
+            <p>
+                Combinando <strong>list-inline</strong>, <strong>list-inline-item</strong>,
+                <strong>text-center</strong> e espaçamentos, é possível criar uma navegação simples.
+            </p>
+
+            <div class="bg-light border rounded p-4">
+                <ul class="list-inline text-center mb-0">
+                    <li class="list-inline-item p-3">
+                        <a href="#">Início</a>
+                    </li>
+
+                    <li class="list-inline-item p-3">
+                        <a href="#">Serviços</a>
+                    </li>
+
+                    <li class="list-inline-item p-3">
+                        <a href="#">Portfólio</a>
+                    </li>
+
+                    <li class="list-inline-item p-3">
+                        <a href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Resumo da aula -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">Resumo da aula</h2>
+
+            <div class="bg-light border rounded p-4">
+                <ul class="mb-0">
+                    <li>O Grid tradicional do Bootstrap é baseado em Flexbox.</li>
+                    <li>CSS Grid é um modelo de layout próprio do CSS.</li>
+                    <li>O Bootstrap permite aplicar aparência de títulos em outros elementos.</li>
+                    <li>As classes display criam títulos maiores e mais destacados.</li>
+                    <li>As classes text-start, text-center e text-end controlam alinhamento horizontal.</li>
+                    <li>As classes list-unstyled e list-inline alteram a apresentação das listas.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Navegação entre aulas -->
+        <div class="d-flex justify-content-between mb-5">
+
+            <a href="aula9.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula11.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
