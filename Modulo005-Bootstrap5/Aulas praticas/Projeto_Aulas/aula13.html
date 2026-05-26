@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 13 - Form-Control no Bootstrap</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+    Aula 13 — Form-Control no Bootstrap
+
+    Nesta aula, o objetivo é entender como o Bootstrap aplica
+    estilos nos campos de formulário por meio da classe form-control.
+
+    Sem as classes do Bootstrap, o formulário funciona,
+    mas fica com aparência padrão do navegador.
+
+    Principais classes estudadas:
+    - container
+    - row
+    - col
+    - justify-content-center
+    - form-label
+    - form-control
+    - form-control-sm
+    - form-control-lg
+    - form-control-plaintext
+    - form-control-color
+    - visually-hidden
+    - btn
+    - btn-primary
+    - mb-3
+    - mt-5
+    - text-center
+    - text-end
+    - px-5
+  -->
+
+    <main class="container mt-5">
+
+        <!-- Cabeçalho da aula -->
+        <div class="text-center mb-5">
+            <h1 class="mb-3">Aula 13- Form-Control no Bootstrap</h1>
+
+            <p class="text-muted">
+                Nesta aula, praticamos a criação de formulários com Bootstrap,
+                usando classes como <strong>form-label</strong>, <strong>form-control</strong>,
+                <strong>btn</strong>, <strong>form-control-sm</strong>,
+                <strong>form-control-lg</strong>, <strong>readonly</strong>,
+                <strong>disabled</strong>, <strong>form-control-plaintext</strong>,
+                <strong>visually-hidden</strong> e <strong>form-control-color</strong>.
+            </p>
+        </div>
+
+        <!-- Parte 1: Formulário sem Bootstrap -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">1. Formulário sem classes do Bootstrap</h2>
+
+            <p>
+                O Bootstrap não aplica o visual automaticamente em todos os campos apenas por estar
+                importado no projeto. Para que os elementos recebam o estilo do framework,
+                precisamos usar as classes corretas.
+            </p>
+
+            <p>
+                No exemplo abaixo, o formulário funciona normalmente, mas os campos aparecem com
+                o estilo padrão do navegador.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+
+                    <div class="border rounded p-4">
+                        <form action="#" method="post">
+
+                            <div class="mb-3">
+                                <label for="usuario-sem-bootstrap">
+                                    Usuário
+                                </label>
+
+                                <input type="text" id="usuario-sem-bootstrap">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="senha-sem-bootstrap">
+                                    Senha
+                                </label>
+
+                                <input type="password" id="senha-sem-bootstrap">
+                            </div>
+
+                            <div>
+                                <input type="submit" value="Entrar">
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Parte 2: Formulário com form-label e form-control -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">2. Formulário com form-label e form-control</h2>
+
+            <p>
+                A classe <strong>form-label</strong> estiliza o texto do campo,
+                enquanto a classe <strong>form-control</strong> aplica o visual padrão
+                do Bootstrap nos inputs.
+            </p>
+
+            <p>
+                Com essas classes, os campos ganham largura adequada, espaçamento interno,
+                bordas padronizadas e efeito visual ao receber foco.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+
+                    <div class="border rounded p-4">
+                        <form action="#" method="post">
+
+                            <div class="mb-3">
+                                <label for="usuario" class="form-label">
+                                    Usuário
+                                </label>
+
+                                <input type="text" id="usuario" class="form-control" placeholder="Digite seu usuário">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">
+                                    Senha
+                                </label>
+
+                                <input type="password" id="senha" class="form-control" placeholder="Digite sua senha">
+                            </div>
+
+                            <div class="mb-3 text-center">
+                                <input type="submit" value="Entrar" class="btn btn-primary">
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Parte 3: Botões com Bootstrap -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">3. Botões com btn, btn-primary e px-5</h2>
+
+            <p>
+                Para estilizar botões no Bootstrap, usamos a classe base
+                <strong>btn</strong> junto com uma classe de cor, como
+                <strong>btn-primary</strong>.
+            </p>
+
+            <p>
+                A classe <strong>px-5</strong> aumenta o espaçamento interno horizontal
+                do botão, deixando-o mais largo.
+            </p>
+
+            <div class="border rounded p-4">
+
+                <div class="mb-3">
+                    <input type="submit" value="Entrar" class="btn btn-primary">
+                </div>
+
+                <div class="mb-0">
+                    <input type="submit" value="Entrar com mais destaque" class="btn btn-primary px-5">
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Parte 4: Tamanhos dos campos -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">4. Tamanhos dos campos com form-control-sm e form-control-lg</h2>
+
+            <p>
+                O Bootstrap permite alterar o tamanho dos campos usando classes específicas.
+                A classe <strong>form-control-sm</strong> deixa o campo menor,
+                enquanto <strong>form-control-lg</strong> deixa o campo maior.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+
+                    <div class="border rounded p-4">
+
+                        <div class="mb-3">
+                            <label for="usuario-pequeno" class="form-label">
+                                Usuário com campo pequeno
+                            </label>
+
+                            <input type="text" id="usuario-pequeno" class="form-control form-control-sm"
+                                placeholder="Campo pequeno">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="usuario-normal" class="form-label">
+                                Usuário com campo normal
+                            </label>
+
+                            <input type="text" id="usuario-normal" class="form-control" placeholder="Campo normal">
+                        </div>
+
+                        <div class="mb-0">
+                            <label for="usuario-grande" class="form-label">
+                                Usuário com campo grande
+                            </label>
+
+                            <input type="text" id="usuario-grande" class="form-control form-control-lg"
+                                placeholder="Campo grande">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Parte 5: disabled e readonly -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">5. Campos disabled e readonly</h2>
+
+            <p>
+                O atributo <strong>disabled</strong> deixa o campo desabilitado.
+                O usuário não consegue editar o conteúdo e, normalmente, esse valor
+                não é enviado junto com o formulário.
+            </p>
+
+            <p>
+                O atributo <strong>readonly</strong> também impede a edição,
+                mas mantém o campo com comportamento mais próximo de um campo comum.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+
+                    <div class="border rounded p-4">
+
+                        <div class="mb-3">
+                            <label for="email-disabled" class="form-label">
+                                E-mail desabilitado
+                            </label>
+
+                            <input type="text" id="email-disabled" class="form-control" value="teste@gmail.com"
+                                disabled>
+                        </div>
+
+                        <div class="mb-0">
+                            <label for="email-readonly" class="form-label">
+                                E-mail somente leitura
+                            </label>
+
+                            <input type="text" id="email-readonly" class="form-control" value="teste@gmail.com"
+                                readonly>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Parte 6: form-control-plaintext -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">6. Campo com form-control-plaintext</h2>
+
+            <p>
+                A classe <strong>form-control-plaintext</strong> exibe o valor como
+                texto simples, sem a aparência tradicional de um input.
+            </p>
+
+            <p>
+                Esse recurso é útil quando queremos mostrar uma informação fixa dentro
+                de uma estrutura de formulário.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+
+                    <div class="border rounded p-4">
+
+                        <div class="mb-0">
+                            <label for="email-plaintext" class="form-label">
+                                E-mail em texto simples
+                            </label>
+
+                            <input type="text" id="email-plaintext" class="form-control-plaintext"
+                                value="teste@gmail.com" readonly>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Parte 7: visually-hidden -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">7. Label escondido com visually-hidden</h2>
+
+            <p>
+                A classe <strong>visually-hidden</strong> esconde o elemento visualmente,
+                mas mantém a informação disponível para leitores de tela.
+            </p>
+
+            <p>
+                Isso é importante para acessibilidade, principalmente quando usamos
+                campos com placeholder e não queremos exibir o label na tela.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+
+                    <div class="border rounded p-4">
+
+                        <div class="mb-0">
+                            <label for="email-hidden" class="visually-hidden">
+                                E-mail
+                            </label>
+
+                            <input type="email" id="email-hidden" class="form-control" placeholder="Digite seu e-mail">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Parte 8: Upload de arquivo -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">8. Campo para carregar ficheiro</h2>
+
+            <p>
+                Para trabalhar com envio de arquivos, usamos o campo
+                <strong>type="file"</strong>.
+            </p>
+
+            <p>
+                Quando um formulário envia arquivos, é comum usar também o atributo
+                <strong>enctype="multipart/form-data"</strong> na tag form.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+
+                    <div class="border rounded p-4">
+                        <form action="#" method="post" enctype="multipart/form-data">
+
+                            <div class="mb-0">
+                                <label for="arquivo" class="form-label">
+                                    Carregar ficheiro
+                                </label>
+
+                                <input type="file" id="arquivo" class="form-control">
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Parte 9: Campo de cor -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">9. Campo de cor com form-control-color</h2>
+
+            <p>
+                O campo <strong>type="color"</strong> permite selecionar uma cor.
+                No Bootstrap, podemos usar a classe <strong>form-control-color</strong>
+                para deixar esse campo com uma aparência mais adequada.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+
+                    <div class="border rounded p-4">
+
+                        <div class="mb-0">
+                            <label for="cor" class="form-label">
+                                Escolher cor
+                            </label>
+
+                            <input type="color" id="cor" class="form-control form-control-color" value="#0d6efd"
+                                title="Escolha uma cor">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Parte 10: Textarea -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">10. Campo de observações com textarea</h2>
+
+            <p>
+                O elemento <strong>textarea</strong> é usado para textos maiores,
+                como mensagens, descrições e observações.
+            </p>
+
+            <p>
+                Assim como os inputs, ele também pode receber a classe
+                <strong>form-control</strong>.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+
+                    <div class="border rounded p-4">
+
+                        <div class="mb-0">
+                            <label for="observacoes" class="form-label">
+                                Observações
+                            </label>
+
+                            <textarea id="observacoes" class="form-control" rows="5"
+                                placeholder="Digite suas observações"></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Exemplo final da aula -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">11. Exemplo prático completo</h2>
+
+            <p>
+                Neste exemplo, reunimos vários recursos estudados na aula:
+                campos de texto, senha, upload de arquivo, seletor de cor,
+                textarea e botão com Bootstrap.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+
+                    <div class="bg-light border rounded p-4">
+                        <form action="#" method="post" enctype="multipart/form-data">
+
+                            <div class="mb-3">
+                                <label for="usuario-final" class="form-label">
+                                    Usuário
+                                </label>
+
+                                <input type="text" id="usuario-final" class="form-control"
+                                    placeholder="Digite seu usuário">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="senha-final" class="form-label">
+                                    Senha
+                                </label>
+
+                                <input type="password" id="senha-final" class="form-control"
+                                    placeholder="Digite sua senha">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="arquivo-final" class="form-label">
+                                    Carregar ficheiro
+                                </label>
+
+                                <input type="file" id="arquivo-final" class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cor-final" class="form-label">
+                                    Escolher cor
+                                </label>
+
+                                <input type="color" id="cor-final" class="form-control form-control-color"
+                                    value="#0d6efd" title="Escolha uma cor">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="observacoes-final" class="form-label">
+                                    Observações
+                                </label>
+
+                                <textarea id="observacoes-final" class="form-control" rows="5"
+                                    placeholder="Digite suas observações"></textarea>
+                            </div>
+
+                            <div class="mb-0 text-end">
+                                <input type="submit" value="Enviar" class="btn btn-primary px-5">
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Resumo da aula -->
+        <section class="mb-5">
+
+            <h2 class="mb-3">Resumo da aula</h2>
+
+            <div class="bg-light border rounded p-4">
+                <ul class="mb-0">
+                    <li>O Bootstrap não aplica o estilo automaticamente em todos os campos.</li>
+                    <li>A classe form-label estiliza os labels dos formulários.</li>
+                    <li>A classe form-control aplica o visual padrão nos inputs.</li>
+                    <li>As classes form-control-sm e form-control-lg alteram o tamanho dos campos.</li>
+                    <li>A classe btn é a base dos botões no Bootstrap.</li>
+                    <li>A classe btn-primary aplica a cor principal do Bootstrap no botão.</li>
+                    <li>O atributo disabled bloqueia o campo.</li>
+                    <li>O atributo readonly impede edição, mas mantém o campo legível.</li>
+                    <li>A classe form-control-plaintext exibe o campo como texto simples.</li>
+                    <li>A classe visually-hidden melhora a acessibilidade escondendo visualmente o label.</li>
+                    <li>A classe form-control-color melhora a aparência do campo de seleção de cor.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Navegação entre aulas -->
+        <div class="d-flex justify-content-between mb-5">
+
+            <a href="aula12.html" class="btn btn-secondary">
+                Aula anterior
+            </a>
+
+            <a href="aula14.html" class="btn btn-primary">
+                Próxima aula
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
