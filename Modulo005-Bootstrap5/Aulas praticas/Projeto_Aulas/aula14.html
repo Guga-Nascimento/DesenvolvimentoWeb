@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade para funcionar bem em celular, tablet e computador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Descrição do titulo</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+    crossorigin="anonymous">
+
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container mt-5">
+
+    <!-- Cabeçalho da aula -->
+    <div class="text-center mb-5">
+        <h1 class="mb-3">Aula 14 - Select e Range no Bootstrap</h1>
+
+        <p class="text-muted">
+            Nesta primeira parte da aula, praticamos o uso de campos
+            <strong>select</strong> e <strong>range</strong> com Bootstrap,
+            aplicando classes como <strong>form-select</strong>,
+            <strong>form-select-sm</strong>, <strong>form-select-lg</strong>
+            e <strong>form-range</strong>.
+        </p>
+    </div>
+
+    <!-- Parte 1: Select sem Bootstrap -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">1. Select sem classes do Bootstrap</h2>
+
+        <p>
+            O elemento <strong>select</strong> é usado para criar uma lista de opções.
+            Sem as classes do Bootstrap, ele funciona normalmente, mas mantém a aparência
+            padrão do navegador.
+        </p>
+
+        <p>
+            Neste primeiro exemplo, ainda não foi aplicada nenhuma classe visual do Bootstrap.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+                    <form action="#" method="post">
+
+                        <div class="mb-0">
+                            <label for="select-sem-bootstrap" class="form-label">
+                                Escolha uma opção
+                            </label>
+
+                            <select id="select-sem-bootstrap">
+                                <option selected>Escolha uma opção</option>
+                                <option value="1">Opção 1</option>
+                                <option value="2">Opção 2</option>
+                                <option value="3">Opção 3</option>
+                                <option value="4">Opção 4</option>
+                                <option value="5">Opção 5</option>
+                                <option value="6">Opção 6</option>
+                                <option value="7">Opção 7</option>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 2: Select com form-select -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">2. Select com form-select</h2>
+
+        <p>
+            A classe <strong>form-select</strong> aplica o estilo padrão do Bootstrap
+            ao campo de seleção.
+        </p>
+
+        <p>
+            Com ela, o campo ganha largura adequada, espaçamento interno, borda padronizada
+            e aparência mais alinhada ao restante dos formulários.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+                    <form action="#" method="post">
+
+                        <div class="mb-0">
+                            <label for="select-bootstrap" class="form-label">
+                                Escolha uma opção
+                            </label>
+
+                            <select id="select-bootstrap" class="form-select">
+                                <option selected>Escolha uma opção</option>
+                                <option value="1">Opção 1</option>
+                                <option value="2">Opção 2</option>
+                                <option value="3">Opção 3</option>
+                                <option value="4">Opção 4</option>
+                                <option value="5">Opção 5</option>
+                                <option value="6">Opção 6</option>
+                                <option value="7">Opção 7</option>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 3: Tamanhos do select -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">3. Tamanhos do select com form-select-sm e form-select-lg</h2>
+
+        <p>
+            Assim como acontece com os inputs, o Bootstrap também permite alterar
+            o tamanho do campo <strong>select</strong>.
+        </p>
+
+        <p>
+            A classe <strong>form-select-sm</strong> deixa o campo menor,
+            enquanto a classe <strong>form-select-lg</strong> deixa o campo maior.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <div class="mb-3">
+                        <label for="select-pequeno" class="form-label">
+                            Select pequeno
+                        </label>
+
+                        <select id="select-pequeno" class="form-select form-select-sm">
+                            <option selected>Escolha uma opção</option>
+                            <option value="1">Opção 1</option>
+                            <option value="2">Opção 2</option>
+                            <option value="3">Opção 3</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="select-normal" class="form-label">
+                            Select normal
+                        </label>
+
+                        <select id="select-normal" class="form-select">
+                            <option selected>Escolha uma opção</option>
+                            <option value="1">Opção 1</option>
+                            <option value="2">Opção 2</option>
+                            <option value="3">Opção 3</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-0">
+                        <label for="select-grande" class="form-label">
+                            Select grande
+                        </label>
+
+                        <select id="select-grande" class="form-select form-select-lg">
+                            <option selected>Escolha uma opção</option>
+                            <option value="1">Opção 1</option>
+                            <option value="2">Opção 2</option>
+                            <option value="3">Opção 3</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 4: Select múltiplo -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">4. Select múltiplo com multiple</h2>
+
+        <p>
+            O atributo <strong>multiple</strong> permite selecionar mais de uma opção
+            dentro do mesmo campo <strong>select</strong>.
+        </p>
+
+        <p>
+            Em muitos navegadores, para selecionar várias opções, o usuário pode usar
+            a tecla <strong>Ctrl</strong> ou <strong>Shift</strong> junto com o clique.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+                    <form action="#" method="post">
+
+                        <div class="mb-0">
+                            <label for="select-multiplo" class="form-label">
+                                Escolha uma ou mais opções
+                            </label>
+
+                            <select id="select-multiplo" class="form-select" multiple>
+                                <option selected>Escolha uma opção</option>
+                                <option value="1">Opção 1</option>
+                                <option value="2">Opção 2</option>
+                                <option value="3">Opção 3</option>
+                                <option value="4">Opção 4</option>
+                                <option value="5">Opção 5</option>
+                                <option value="6">Opção 6</option>
+                                <option value="7">Opção 7</option>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 5: Select múltiplo com size -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">5. Select múltiplo com size</h2>
+
+        <p>
+            O atributo <strong>size</strong> define quantas opções aparecem visíveis
+            ao mesmo tempo dentro do select.
+        </p>
+
+        <p>
+            No exemplo abaixo, usamos <strong>size="5"</strong>, então o campo exibe
+            cinco linhas de opções visíveis.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+                    <form action="#" method="post">
+
+                        <div class="mb-0">
+                            <label for="select-size" class="form-label">
+                                Select múltiplo com tamanho definido
+                            </label>
+
+                            <select id="select-size" class="form-select" multiple size="5">
+                                <option selected>Escolha uma opção</option>
+                                <option value="1">Opção 1</option>
+                                <option value="2">Opção 2</option>
+                                <option value="3">Opção 3</option>
+                                <option value="4">Opção 4</option>
+                                <option value="5">Opção 5</option>
+                                <option value="6">Opção 6</option>
+                                <option value="7">Opção 7</option>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 6: Select desabilitado -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">6. Select desabilitado com disabled</h2>
+
+        <p>
+            O atributo <strong>disabled</strong> bloqueia o campo, impedindo que o usuário
+            altere a opção selecionada.
+        </p>
+
+        <p>
+            Esse recurso pode ser usado quando uma escolha depende de outra informação
+            ou quando o campo deve ficar apenas como visualização.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <div class="mb-0">
+                        <label for="select-disabled" class="form-label">
+                            Select desabilitado
+                        </label>
+
+                        <select id="select-disabled" class="form-select" disabled>
+                            <option selected>Escolha uma opção</option>
+                            <option value="1">Opção 1</option>
+                            <option value="2">Opção 2</option>
+                            <option value="3">Opção 3</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 7: Range sem Bootstrap -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">7. Range sem classes do Bootstrap</h2>
+
+        <p>
+            O campo <strong>input type="range"</strong> cria uma barra deslizante
+            para escolha de valores.
+        </p>
+
+        <p>
+            Sem a classe do Bootstrap, ele mantém a aparência padrão do navegador.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+                    <form action="#" method="post">
+
+                        <div class="mb-0">
+                            <label for="range-sem-bootstrap" class="form-label">
+                                Quantidade
+                            </label>
+
+                            <input 
+                                type="range" 
+                                id="range-sem-bootstrap"
+                            >
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 8: Range com form-range -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">8. Range com form-range</h2>
+
+        <p>
+            A classe <strong>form-range</strong> aplica o visual do Bootstrap
+            ao campo de intervalo.
+        </p>
+
+        <p>
+            Essa classe melhora a aparência da barra, mas não exibe o número escolhido
+            automaticamente.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+                    <form action="#" method="post">
+
+                        <div class="mb-0">
+                            <label for="range-bootstrap" class="form-label">
+                                Quantidade
+                            </label>
+
+                            <input 
+                                type="range" 
+                                id="range-bootstrap"
+                                class="form-range"
+                            >
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 9: Range desabilitado -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">9. Range desabilitado</h2>
+
+        <p>
+            Assim como outros campos de formulário, o range também pode ser bloqueado
+            com o atributo <strong>disabled</strong>.
+        </p>
+
+        <p>
+            Quando está desabilitado, o usuário não consegue mover o controle.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <div class="mb-0">
+                        <label for="range-disabled" class="form-label">
+                            Quantidade desabilitada
+                        </label>
+
+                        <input 
+                            type="range" 
+                            id="range-disabled"
+                            class="form-range"
+                            disabled
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 10: Range com min e max -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">10. Range com min e max</h2>
+
+        <p>
+            Os atributos <strong>min</strong> e <strong>max</strong> definem o valor mínimo
+            e o valor máximo permitidos no campo.
+        </p>
+
+        <p>
+            No exemplo abaixo, o valor pode variar de <strong>0</strong> até
+            <strong>100</strong>.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <div class="mb-0">
+                        <label for="range-min-max" class="form-label">
+                            Quantidade de 0 até 100
+                        </label>
+
+                        <input 
+                            type="range" 
+                            id="range-min-max"
+                            class="form-range"
+                            min="0"
+                            max="100"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 11: Range com step -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">11. Range com step</h2>
+
+        <p>
+            O atributo <strong>step</strong> define de quanto em quanto o valor será alterado.
+        </p>
+
+        <p>
+            No exemplo abaixo, usamos <strong>step="10"</strong>. Isso significa que
+            o range avançará de 10 em 10.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <div class="mb-0">
+                        <label for="range-step" class="form-label">
+                            Quantidade de 10 em 10
+                        </label>
+
+                        <input 
+                            type="range" 
+                            id="range-step"
+                            class="form-range"
+                            min="0"
+                            max="100"
+                            step="10"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+        <!-- Parte 12: Checkbox simples -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">12. Checkbox simples</h2>
+
+        <p>
+            O <strong>checkbox</strong> é usado quando o usuário pode marcar
+            ou desmarcar uma opção.
+        </p>
+
+        <p>
+            Para estilizar esse tipo de campo no Bootstrap, usamos a estrutura
+            com <strong>form-check</strong>, <strong>form-check-input</strong>
+            e <strong>form-check-label</strong>.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+                    <form action="#" method="post">
+
+                        <div class="form-check">
+                            <input 
+                                type="checkbox" 
+                                id="checkbox-simples"
+                                class="form-check-input"
+                            >
+
+                            <label for="checkbox-simples" class="form-check-label">
+                                Marcar opção
+                            </label>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 13: Checkbox marcado e desabilitado -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">13. Checkbox checked e disabled</h2>
+
+        <p>
+            O atributo <strong>checked</strong> faz com que a opção já venha marcada
+            quando a página é carregada.
+        </p>
+
+        <p>
+            O atributo <strong>disabled</strong> bloqueia a opção, impedindo que
+            o usuário altere seu estado.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <div class="form-check mb-3">
+                        <input 
+                            type="checkbox" 
+                            id="checkbox-marcado"
+                            class="form-check-input"
+                            checked
+                        >
+
+                        <label for="checkbox-marcado" class="form-check-label">
+                            Opção já marcada
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-0">
+                        <input 
+                            type="checkbox" 
+                            id="checkbox-desabilitado"
+                            class="form-check-input"
+                            disabled
+                        >
+
+                        <label for="checkbox-desabilitado" class="form-check-label">
+                            Opção desabilitada
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 14: Radio buttons -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">14. Radio buttons</h2>
+
+        <p>
+            O <strong>radio button</strong> é usado quando o usuário deve escolher
+            apenas uma opção dentro de um grupo.
+        </p>
+
+        <p>
+            Para que apenas uma opção seja marcada, todos os radios do mesmo grupo
+            precisam ter o mesmo atributo <strong>name</strong>.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+                    <form action="#" method="post">
+
+                        <div class="form-check mb-3">
+                            <input 
+                                type="radio" 
+                                id="radio-a"
+                                name="opcao"
+                                class="form-check-input"
+                            >
+
+                            <label for="radio-a" class="form-check-label">
+                                Opção 1
+                            </label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input 
+                                type="radio" 
+                                id="radio-b"
+                                name="opcao"
+                                class="form-check-input"
+                            >
+
+                            <label for="radio-b" class="form-check-label">
+                                Opção 2
+                            </label>
+                        </div>
+
+                        <div class="form-check mb-0">
+                            <input 
+                                type="radio" 
+                                id="radio-c"
+                                name="opcao"
+                                class="form-check-input"
+                                checked
+                            >
+
+                            <label for="radio-c" class="form-check-label">
+                                Opção 3 marcada
+                            </label>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 15: Checkbox e radio inline -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">15. Opções inline</h2>
+
+        <p>
+            A classe <strong>form-check-inline</strong> coloca as opções lado a lado,
+            em vez de deixar cada opção em uma linha.
+        </p>
+
+        <p>
+            Esse recurso pode ser usado tanto em checkboxes quanto em radio buttons.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <h3 class="h5 mb-3">Checkboxes inline</h3>
+
+                    <div class="form-check form-check-inline">
+                        <input 
+                            type="checkbox" 
+                            id="checkbox-inline-1"
+                            class="form-check-input"
+                        >
+
+                        <label for="checkbox-inline-1" class="form-check-label">
+                            Opção 1
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input 
+                            type="checkbox" 
+                            id="checkbox-inline-2"
+                            class="form-check-input"
+                        >
+
+                        <label for="checkbox-inline-2" class="form-check-label">
+                            Opção 2
+                        </label>
+                    </div>
+
+                    <hr>
+
+                    <h3 class="h5 mb-3">Radio buttons inline</h3>
+
+                    <div class="form-check form-check-inline">
+                        <input 
+                            type="radio" 
+                            id="radio-inline-1"
+                            name="radio-inline"
+                            class="form-check-input"
+                        >
+
+                        <label for="radio-inline-1" class="form-check-label">
+                            Opção 1
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input 
+                            type="radio" 
+                            id="radio-inline-2"
+                            name="radio-inline"
+                            class="form-check-input"
+                        >
+
+                        <label for="radio-inline-2" class="form-check-label">
+                            Opção 2
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 16: Switches -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">16. Switches</h2>
+
+        <p>
+            O <strong>switch</strong> é uma variação visual do checkbox.
+            Ele é muito usado para representar opções de ativar ou desativar algo.
+        </p>
+
+        <p>
+            Para criar um switch no Bootstrap, usamos <strong>form-check</strong>,
+            <strong>form-switch</strong>, <strong>form-check-input</strong>
+            e o atributo <strong>role="switch"</strong>.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <div class="form-check form-switch mb-3">
+                        <input 
+                            type="checkbox" 
+                            id="switch-desligado"
+                            class="form-check-input"
+                            role="switch"
+                        >
+
+                        <label for="switch-desligado" class="form-check-label">
+                            Switch desativado por padrão
+                        </label>
+                    </div>
+
+                    <div class="form-check form-switch mb-3">
+                        <input 
+                            type="checkbox" 
+                            id="switch-ligado"
+                            class="form-check-input"
+                            role="switch"
+                            checked
+                        >
+
+                        <label for="switch-ligado" class="form-check-label">
+                            Switch ativado por padrão
+                        </label>
+                    </div>
+
+                    <div class="form-check form-switch mb-0">
+                        <input 
+                            type="checkbox" 
+                            id="switch-disabled"
+                            class="form-check-input"
+                            role="switch"
+                            disabled
+                        >
+
+                        <label for="switch-disabled" class="form-check-label">
+                            Switch desabilitado
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 17: Switch inline e reverse -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">17. Switch inline e reverse</h2>
+
+        <p>
+            A classe <strong>form-check-inline</strong> deixa os switches lado a lado.
+        </p>
+
+        <p>
+            A classe <strong>form-check-reverse</strong> inverte a posição,
+            colocando o texto antes do controle.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <div class="form-check form-switch form-check-inline">
+                        <input 
+                            type="checkbox" 
+                            id="switch-inline-1"
+                            class="form-check-input"
+                            role="switch"
+                            checked
+                        >
+
+                        <label for="switch-inline-1" class="form-check-label">
+                            Ativo
+                        </label>
+                    </div>
+
+                    <div class="form-check form-switch form-check-inline">
+                        <input 
+                            type="checkbox" 
+                            id="switch-inline-2"
+                            class="form-check-input"
+                            role="switch"
+                        >
+
+                        <label for="switch-inline-2" class="form-check-label">
+                            Inativo
+                        </label>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-check form-switch form-check-reverse mb-0">
+                        <input 
+                            type="checkbox" 
+                            id="switch-reverse"
+                            class="form-check-input"
+                            role="switch"
+                            checked
+                        >
+
+                        <label for="switch-reverse" class="form-check-label">
+                            Switch com posição invertida
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 18: Input group com texto antes do input -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">18. Input group com texto antes do campo</h2>
+
+        <p>
+            O <strong>input group</strong> permite juntar textos, símbolos,
+            botões ou outros elementos ao campo de formulário.
+        </p>
+
+        <p>
+            A classe <strong>input-group</strong> cria o agrupamento,
+            enquanto <strong>input-group-text</strong> estiliza o texto auxiliar.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <label for="usuario-input-group" class="form-label">
+                        Usuário
+                    </label>
+
+                    <div class="input-group mb-0">
+                        <span class="input-group-text" id="usuario-addon">
+                            @
+                        </span>
+
+                        <input 
+                            type="text" 
+                            id="usuario-input-group"
+                            class="form-control"
+                            placeholder="Username"
+                            aria-label="Username"
+                            aria-describedby="usuario-addon"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 19: Input group com texto depois do input -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">19. Input group com texto depois do campo</h2>
+
+        <p>
+            O texto auxiliar também pode aparecer depois do input.
+            Isso é comum em campos de e-mail, domínio, unidade de medida ou valores.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <label for="email-input-group" class="form-label">
+                        E-mail
+                    </label>
+
+                    <div class="input-group mb-0">
+                        <input 
+                            type="text" 
+                            id="email-input-group"
+                            class="form-control"
+                            placeholder="Digite seu usuário"
+                            aria-label="Recipient's username"
+                            aria-describedby="email-addon"
+                        >
+
+                        <span class="input-group-text" id="email-addon">
+                            @example.com
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 20: Input group com URL -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">20. Input group com URL</h2>
+
+        <p>
+            O input group também pode ser usado para indicar uma parte fixa
+            de uma URL, deixando o usuário preencher apenas o complemento.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <label for="url-input-group" class="form-label">
+                        Your vanity URL
+                    </label>
+
+                    <div class="input-group mb-0">
+                        <span class="input-group-text" id="url-addon">
+                            https://example.com/users/
+                        </span>
+
+                        <input 
+                            type="text" 
+                            id="url-input-group"
+                            class="form-control"
+                            aria-label="Vanity URL"
+                            aria-describedby="url-addon"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 21: Input group com valores -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">21. Input group com valores</h2>
+
+        <p>
+            Também podemos usar o input group para campos monetários,
+            adicionando símbolos antes e depois do campo.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <label for="valor-input-group" class="form-label">
+                        Valor
+                    </label>
+
+                    <div class="input-group mb-0">
+                        <span class="input-group-text">
+                            R$
+                        </span>
+
+                        <input 
+                            type="text" 
+                            id="valor-input-group"
+                            class="form-control"
+                            aria-label="Valor em reais"
+                        >
+
+                        <span class="input-group-text">
+                            ,00
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 22: Input group com dois campos -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">22. Input group com dois campos</h2>
+
+        <p>
+            Um mesmo input group pode agrupar mais de um campo.
+            No exemplo abaixo, simulamos um preenchimento de usuário e servidor.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <label class="form-label">
+                        Usuário e servidor
+                    </label>
+
+                    <div class="input-group mb-0">
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            placeholder="Username"
+                            aria-label="Username"
+                        >
+
+                        <span class="input-group-text">
+                            @
+                        </span>
+
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            placeholder="Server"
+                            aria-label="Server"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 23: Input group com textarea -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">23. Input group com textarea</h2>
+
+        <p>
+            O input group também pode ser usado com <strong>textarea</strong>,
+            útil para campos de observação ou mensagens.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <label for="textarea-input-group" class="form-label">
+                        Observações
+                    </label>
+
+                    <div class="input-group mb-0">
+                        <span class="input-group-text">
+                            Texto
+                        </span>
+
+                        <textarea 
+                            id="textarea-input-group"
+                            class="form-control"
+                            aria-label="With textarea"
+                        ></textarea>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Parte 24: Input group com checkbox e radio -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">24. Input group com checkbox e radio</h2>
+
+        <p>
+            O input group também aceita controles como <strong>checkbox</strong>
+            e <strong>radio</strong> dentro da área auxiliar.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <div class="border rounded p-4">
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-text">
+                            <input 
+                                type="checkbox" 
+                                class="form-check-input mt-0"
+                                aria-label="Checkbox para acompanhar o input"
+                            >
+                        </div>
+
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            aria-label="Input com checkbox"
+                        >
+                    </div>
+
+                    <div class="input-group mb-0">
+                        <div class="input-group-text">
+                            <input 
+                                type="radio" 
+                                class="form-check-input mt-0"
+                                name="radio-input-group"
+                                aria-label="Radio para acompanhar o input"
+                            >
+                        </div>
+
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            aria-label="Input com radio"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Resumo da aula -->
+    <section class="mb-5">
+
+        <h2 class="mb-3">Resumo da aula</h2>
+
+        <div class="bg-light border rounded p-4">
+            <ul class="mb-0">
+                <li>A classe form-select aplica o visual do Bootstrap no campo select.</li>
+                <li>As classes form-select-sm e form-select-lg alteram o tamanho do select.</li>
+                <li>O atributo multiple permite selecionar mais de uma opção.</li>
+                <li>O atributo size define quantas opções aparecem visíveis no select.</li>
+                <li>A classe form-range aplica o visual do Bootstrap ao input type="range".</li>
+                <li>O Bootstrap não mostra o valor numérico do range automaticamente.</li>
+                <li>Os atributos min, max e step controlam o comportamento do range.</li>
+                <li>A estrutura form-check organiza checkboxes e radio buttons.</li>
+                <li>A classe form-check-input estiliza o campo de marcação.</li>
+                <li>A classe form-check-label estiliza o texto da opção.</li>
+                <li>O atributo checked deixa uma opção marcada por padrão.</li>
+                <li>O atributo disabled bloqueia a interação com o campo.</li>
+                <li>A classe form-check-inline coloca as opções lado a lado.</li>
+                <li>A classe form-switch transforma um checkbox em switch.</li>
+                <li>A classe form-check-reverse inverte a posição do controle e do texto.</li>
+                <li>A classe input-group agrupa campos com textos, símbolos ou outros elementos.</li>
+                <li>A classe input-group-text estiliza os elementos auxiliares do grupo.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- Navegação entre aulas -->
+    <div class="d-flex justify-content-between mb-5">
+
+        <a href="aula13.html" class="btn btn-secondary">
+            Aula anterior
+        </a>
+
+        <a href="aula15.html" class="btn btn-primary">
+            Próxima aula
+        </a>
+
+    </div>
+
+
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
